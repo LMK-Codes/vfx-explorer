@@ -39,25 +39,6 @@ header {
   height: 24px;
 }
 
-/* mobile menu button */ 
-.nav-toggle {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-nav {
-  display: none; /* hides nav links for mobile screen */
-}
-
-/* style for mobile navbar */ 
-nav a {
-  color: #111;
-  text-decoration: none;
-  margin-left: 1rem;
-  font-size: 0.9rem;
-}
 
 /*  main content  */
 h1 {
@@ -117,6 +98,147 @@ footer {
 }
 
 
+
+/* ---------- CAREERS PAGE ---------- */
+
+/* intro block */
+.careers-hero {
+  background: #024a8b;          /* dark blue strip */
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.careers-hero h1 {
+  margin-bottom: 0.75rem;
+}
+
+.careers-hero p {
+  margin: 0 auto;
+  max-width: 40rem;
+}
+
+/* subnav links for roles */
+.career-subnav {
+  background: #f2ff9c;          /* light green */
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.career-subnav a {
+  color: #024a8b;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.7rem;
+  background: #ffd3a3;          /* peach pill */
+  border-radius: 999px;
+}
+
+/* main FX Artist block */
+.career-section {
+  background: #f2ff9c;          /* light green */
+  padding: 2rem 1.5rem 3rem;
+  color: #111;
+}
+
+.career-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 0 1.5rem;
+  display: inline-block;
+  background: #ffd3a3;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 6px 6px 0 #fbbf24;  /* fake drop shadow */
+}
+
+/* layout: image left, text right */
+.career-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* big image box */
+.career-image {
+  flex: 0 0 40%;
+  max-width: 340px;
+  height: 220px;
+  background: #ffd3a3;
+  border: 4px solid #ffe53b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.career-image img {
+  width: 95%;      
+  height: auto;
+  display: block;
+  margin: 0 auto;  /* center the image */
+}
+
+/* two columns on the right */
+.career-columns {
+  flex: 1;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.career-column {
+  flex: 1;
+  font-size: 0.9rem;
+}
+
+/* yellow label headings */
+.career-subheading {
+  display: inline-block;
+  background: #ffe53b;
+  padding: 0.35rem 0.75rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.career-subheading.small {
+  margin-top: 1rem;
+}
+
+.career-column ul {
+  padding-left: 1.1rem;
+  margin-top: 0.25rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* ------------ MOBILE STUFF ---------------- */
+
+/* mobile menu button */ 
+.nav-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+nav {
+  display: none; /* hides nav links for mobile screen */
+}
+
+/* style for mobile navbar */ 
+nav a {
+  color: #111;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+}
 
 
 /*  breakpoint - changes the css for mobile/tablet  */

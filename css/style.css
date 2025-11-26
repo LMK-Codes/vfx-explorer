@@ -5,25 +5,30 @@ body {
   color: #ffffff;
 }
 
-/*  Layout */
+/*  inner padding for header & footer */
 header,
 footer {
   padding: 0.75rem 1rem;
 }
 
+/*  centers whole page */
 main {
   max-width: 70rem;
   margin: 0 auto;
   padding: 1.5rem 1rem 3rem;
 }
 
-/* Header / Nav  */
+/* header / nav layout  */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #ffe53b; /* yellow */
+  background: #ffe53b; 
   color: #111;
+
+  position: sticky;   /* keeps nav bar stuck at the top */
+  top: 0;             
+  z-index: 1000; 
 }
 
 .logo {
@@ -34,6 +39,7 @@ header {
   height: 24px;
 }
 
+/* mobile menu button */ 
 .nav-toggle {
   background: none;
   border: none;
@@ -42,9 +48,10 @@ header {
 }
 
 nav {
-  display: none; /* mobile first: hide nav links */
+  display: none; /* hides nav links for mobile screen */
 }
 
+/* style for mobile navbar */ 
 nav a {
   color: #111;
   text-decoration: none;
@@ -52,7 +59,7 @@ nav a {
   font-size: 0.9rem;
 }
 
-/*  Main content  */
+/*  main content  */
 h1 {
   margin-top: 1.5rem;
   font-size: 2rem;
@@ -63,7 +70,7 @@ p {
   line-height: 1.5;
 }
 
-/* carousel placeholder  */
+/* carousel  */
 .hero-image {
   margin: 1.5rem 0;
   width: 100%;
@@ -88,14 +95,31 @@ p {
   border-radius: 4px;
 }
 
-/* Footer */
+/* footer */
 footer {
   text-align: center;
   font-size: 0.8rem;
   background: #001934;
 }
 
-/*  Simple responsive tweak  */
+
+.back-to-top {
+  position: fixed;     /* fixed positioning */
+  bottom: 1rem;
+  right: 1rem;
+  background: #ffe53b;
+  color: #111;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+
+
+
+/*  breakpoint - changes the css for mobile/tablet  */
 @media (min-width: 768px) {
   .nav-toggle {
     display: none;

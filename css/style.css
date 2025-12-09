@@ -1,20 +1,18 @@
 body {
   margin: 0;
   font-family: 'Courier New', sans-serif;
-  background: #012145; /* dark blue */
-  color: #ffffff;
+  background: #012145; /* dark blue bg */
+  color: #ffffff; /* global font colour */
 }
 
 /* outline for font */
 .text-outline {
-  color: #ffe53b;                     /* inside fill color */
+  color: #ffe53b;                     /* inside fill colour */
   -webkit-text-stroke: 1.2px #1700e9;   /* outline stroke */    
 }
-
 .text-outline-body {
   color: #ffe53b;                   
-  -webkit-text-stroke: 0.5px #7d6fff;  /* much thinner */
-  
+  -webkit-text-stroke: 0.5px #7d6fff;  
 }
 
 /*  inner padding for header & footer */
@@ -53,12 +51,11 @@ header {
 }
 
 header nav a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* shows an underline when you hover over navigation links */
 }
 
 
 /* labelling page headings */
-
 .section-label {
   text-align: center;
   font-size: 2rem;
@@ -95,9 +92,7 @@ p {
 
 /* image carousel  */
 .hero-image { /* container */
-
   position: relative; 
-  
   width: 50%;
   max-width: 24rem;
   margin: 0 auto;
@@ -290,11 +285,23 @@ footer {
   font-size: 0.9rem;
 }
 
-
-
 .career-column ul {
   padding-left: 1.1rem;
   margin-top: 0.25rem;
+}
+
+/* yellow label headings */
+.career-subheading {
+  display: inline-block;
+  background: #ffe53b;
+  padding: 0.35rem 0.75rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  box-shadow: 6px 6px 0 #fbbf24;  /* drop shadow */
+}
+
+.career-subheading.small {
+  margin-top: 1rem;
 }
 
 
@@ -430,6 +437,24 @@ footer {
   color: #000000; /* text */
 }
 
+.resource-subnav {
+  background: #ffff00;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;              /* spacing between TUTORIALS and COMMUNITIES */
+}
+
+.resource-subnav a {
+  font-size: 2rem;        
+  font-weight: 700;
+  text-decoration: none;
+  color: #ffe53b;         /* gold fill */
+  -webkit-text-stroke: 1px #024a8b;   /* dark blue outline */
+}
+
+
 .resource-title {
   text-align: center;
   font-size: 2rem;
@@ -475,11 +500,12 @@ footer {
   display: block;
 }
 
-/* text column on the right */
+/* layout width & flex behavior */
 .resource-columns {
   flex: 1;
 }
 
+/* text styling & spacing */
 .resource-column {
   font-size: 0.95rem;
 }
@@ -506,40 +532,47 @@ footer {
 
 
 
+/* ------------ NAV / MOBILE MENU ---------------- */
 
-
-
-/* ------------ MOBILE STUFF ---------------- */
-
-/* mobile menu button */ 
+/* hamburger button */
 .nav-toggle {
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   cursor: pointer;
+  color: #ffe53b;
 }
 
-nav {
-  display: none; /* hides nav links for mobile screen */
+/* base nav (mobile first): hidden until opened via JS */
+header nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
 }
 
-/* style for mobile navbar */ 
-nav a {
+header nav a {
   color: #111;
   text-decoration: none;
-  margin-left: 1rem;
   font-size: 0.9rem;
 }
 
+/* when JS adds .open, show the nav */
+header nav.open {
+  display: flex;
+}
 
-/*  breakpoint - changes the css for mobile/tablet  */
+/* tablet/desktop */
 @media (min-width: 768px) {
   .nav-toggle {
-    display: none;
+    display: none;              /* hide hamburger */
   }
 
-  nav {
-    display: flex; /* show nav links on tablet/desktop */
+  header nav {
+    display: flex;              /* always visible */
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0;
   }
 
   main {
@@ -547,3 +580,48 @@ nav a {
   }
 }
 
+/* ----------- MOBILE STUFF ----------- */
+
+@media (max-width: 768px) {
+
+  /* stack nav links nicely on small screens */
+  header nav {
+    align-items: flex-start;
+  }
+
+  /* RESOURCES / COMMUNITIES / TUTORIALS CARDS */
+  .resource-layout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resource-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .tutorial-block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tutorial-logo {
+    flex: 0 0 auto;
+    width: 140px;
+    height: 140px;
+  }
+
+  /* if you actually use these classes, keep them; otherwise delete */
+  .communities-block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .communities-logo {
+    flex: 0 0 auto;
+    width: 140px;
+    height: 140px;
+  }
+
+  /* you can add pipeline / careers stacking here too if needed */
+}

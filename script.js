@@ -25,4 +25,17 @@
 }
 
 
+//mobile nav
+{
+    const navToggle = document.querySelector('.nav-toggle'); //select button
+    const nav = document.querySelector('header nav'); //select nav menu
+
+    navToggle.addEventListener('click', () => // if button is toggled, nav menu is opened
+        {
+            nav.classList.toggle('open'); 
+        }
+    );
+
+
+}
 

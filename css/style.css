@@ -532,96 +532,52 @@ footer {
 
 
 
-/* ------------ NAV / MOBILE MENU ---------------- */
+/* ------------ MOBILE STUFF ---------------- */
 
-/* hamburger button */
+
+/* hide the nav links */ 
+header nav {
+  display: none;
+  flex-direction: column; 
+  gap: 0.5rem;
+  background: #f2ff9c; 
+  padding: 1rem;
+}
+
+
+header nav.open {
+  display: flex;
+}
+
+
+/* hamburger button styles */
 .nav-toggle {
   background: none;
   border: none;
   font-size: 1.8rem;
   cursor: pointer;
-  color: #ffe53b;
+  color: #000000; 
 }
 
-/* base nav (mobile first): hidden until opened via JS */
+/* hide nav by default on mobile */
 header nav {
   display: none;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 0.75rem 1rem;
+  gap: 0.75rem;
+  padding: 1rem;
 }
 
-header nav a {
-  color: #111;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-/* when JS adds .open, show the nav */
+/* show nav when hamburger button is toggled */
 header nav.open {
   display: flex;
 }
 
-/* tablet/desktop */
-@media (min-width: 768px) {
-  .nav-toggle {
-    display: none;              /* hide hamburger */
-  }
-
-  header nav {
-    display: flex;              /* always visible */
-    flex-direction: row;
-    gap: 1rem;
-    padding: 0;
-  }
-
-  main {
-    padding-top: 2rem;
-  }
+/* links */
+header nav a {
+  color: #111;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
-/* ----------- MOBILE STUFF ----------- */
 
-@media (max-width: 768px) {
 
-  /* stack nav links nicely on small screens */
-  header nav {
-    align-items: flex-start;
-  }
-
-  /* RESOURCES / COMMUNITIES / TUTORIALS CARDS */
-  .resource-layout {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .resource-image {
-    width: 140px;
-    height: 140px;
-  }
-
-  .tutorial-block {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .tutorial-logo {
-    flex: 0 0 auto;
-    width: 140px;
-    height: 140px;
-  }
-
-  /* if you actually use these classes, keep them; otherwise delete */
-  .communities-block {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .communities-logo {
-    flex: 0 0 auto;
-    width: 140px;
-    height: 140px;
-  }
-
-  /* you can add pipeline / careers stacking here too if needed */
-}

@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Courier New', sans-serif;
+  font-family: "Istok Web", sans-serif;
   background: #012145; /* dark blue bg */
   color: #ffffff; /* global font colour */
 }
@@ -10,6 +10,7 @@ body {
   color: #ffe53b;                     /* inside fill colour */
   -webkit-text-stroke: 1.2px #1700e9;   /* outline stroke */    
 }
+
 .text-outline-body {
   color: #ffe53b;                   
   -webkit-text-stroke: 0.5px #7d6fff;  
@@ -43,17 +44,29 @@ header {
 }
 
 .logo {
-  font-weight: 700;
+  color: #05ff8a;
+  -webkit-text-stroke: 1.2px #000000;                  
+  font-size: 25px;
 }
 
 .logo-img {
   height: 24px;
 }
 
+.logo-text {
+  font-weight: 800;
+}
+
 header nav a:hover {
   text-decoration: underline; /* shows an underline when you hover over navigation links */
 }
 
+.nav-text {
+  color: #000000;                  
+  -webkit-text-stroke: 0.7px #05d5ff;
+  font-size: 15px;
+  font-weight: 700;
+}
 
 /* labelling page headings */
 .section-label {
@@ -65,7 +78,6 @@ header nav a:hover {
   padding: 0.5rem 1.5rem;
   box-shadow: 6px 6px 0 rgba(251, 86, 36, 0.4);
 }
-
 
 /*  main content  */
 h1 {
@@ -89,6 +101,10 @@ p {
   text-align: center;
 }
 
+
+
+
+/* ----- HOME PAGE ---- */
 
 /* image carousel  */
 .hero-image { /* container */
@@ -148,19 +164,21 @@ p {
   border-radius: 6px;
 }
 
-
 /* quiz button */
 .btn-primary {
+  display: block;
+  text-align: center;
+
   width: 200px;
   padding: 0.75rem 1.5rem;
-  background: #ffe53b;
-  color: #111;
+  background: #3848c3;
+
+  color: #ffe53b;
+  -webkit-text-stroke: 0.7px #000000;
+  font-weight: 750;
+  border-radius: 7px;
   text-decoration: none;
-  font-weight: 700;
-  border-radius: 4px;
 }
-
-
 
 /* footer */
 footer {
@@ -168,7 +186,6 @@ footer {
   font-size: 0.8rem;
   background: #001934;
 }
-
 
 /* back to top button (fixed positioning) */
 .back-to-top {
@@ -183,7 +200,6 @@ footer {
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
-
 
 
 /* ---------- CAREERS PAGE ---------- */
@@ -202,7 +218,6 @@ footer {
   margin: 0 auto;
   max-width: 40rem;
 }
-
 
 .career-subnav {
   background: #f2ff9c;
@@ -305,7 +320,6 @@ footer {
 }
 
 
-
 /* ----------- PIPELINE ----------- */
 .pipeline-grid {
   max-width: 1200px;
@@ -375,9 +389,6 @@ footer {
 
 
 
-
-
-
 /* ------------- SOFTWARE TABLE -------------  */
 
 /* wrapper so the table can scroll on small screens */
@@ -418,11 +429,7 @@ footer {
 }
 
 
-
-
-
 /* ----- RESOURCES PAGE -----  */
-
 
 .communities-section {
   background: #9cff9e;   /* light green/yellow */
@@ -530,46 +537,29 @@ footer {
 }
 
 
-
-
 /* ------------ MOBILE STUFF ---------------- */
-
 
 /* hide the nav links */ 
 header nav {
   display: none;
-  flex-direction: column; 
+  flex-direction: column;
   gap: 0.5rem;
-  background: #f2ff9c; 
+  background: #f2ff9c;
   padding: 1rem;
 }
 
-
+/* show nav when hamburger button is toggled via JS */
 header nav.open {
   display: flex;
 }
 
-
-/* hamburger button styles */
+/* hamburger button style */
 .nav-toggle {
-  background: none;
-  border: none;
   font-size: 1.8rem;
   cursor: pointer;
-  color: #000000; 
-}
-
-/* hide nav by default on mobile */
-header nav {
-  display: none;
-  flex-direction: column;
-  gap: 0.75rem;
-  padding: 1rem;
-}
-
-/* show nav when hamburger button is toggled */
-header nav.open {
-  display: flex;
+  color: #000000;
+  background: none;
+  border: none;
 }
 
 /* links */
@@ -579,5 +569,130 @@ header nav a {
   font-size: 1rem;
 }
 
+/*  breakpoint - changes the css for tablet/desktop  */
+@media (min-width: 768px) {
+  .nav-toggle {
+    display: none;              /* hide hamburger */
+  }
+
+  header nav {
+    display: flex;              /* always show nav */
+    flex-direction: row;
+    gap: 1.5rem;
+    background: transparent;
+    padding: 0;
+  }
+
+  main {
+    padding-top: 2rem;
+  }
+}
+
+/* pipeline */
+@media (max-width: 768px) {
+  /* make the pipeline stack vertically on phones */
+  .pipeline-grid {
+    display: flex;            /* removes grid */
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .pipeline-box,
+  .pipeline-small {
+    width: 90%;
+  }
+  /* smaller text on mobile */
+  .pipeline-small h3 {
+    font-size: 1.4rem;
+  }
+  .pipeline-small p {
+    font-size: 1rem;
+  }
+}
+
+/* careers */
+@media (max-width: 768px) {
+
+  /* tighter padding on small screen */
+  .career-section {
+    padding: 1.5rem 1rem 2.5rem;
+  }
+
+  /* stack image & text instead of side by side */
+  .career-layout {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  /* image is centered, smaller, auto height */
+  .career-image {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 280px;   /* tweak if you want it bigger/smaller */
+    height: auto;
+    margin: 0 auto;     /* center the box */
+  }
+
+  .career-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* text columns become a single column stack */
+  .career-columns {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .career-column {
+    font-size: 0.95rem;
+  }
+  
+}
+
+/* resources */
+@media (max-width: 768px) {
+
+  /* keep the yellow subnav centred and a bit taller */
+  .resources-subnav,
+  .resource-subnav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background: #ffff00;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .resources-subnav a,
+  .resource-subnav a {
+    font-size: 1.5rem;        /* smaller text on mobile */
+  }
+
+
+  /* blocks are stacked instead of side-by-side */
+  .resource-layout {
+    flex-direction: column;     /* logo on top, text underneath */
+    align-items: center;        /* centre the logo */
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  /* resize images for mobile */
+  .resource-image {
+    flex: 0 0 auto;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 0.25rem;
+  }
+
+  .resource-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
 
 

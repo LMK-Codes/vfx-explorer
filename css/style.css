@@ -1,8 +1,20 @@
 body {
   margin: 0;
   font-family: 'Courier New', sans-serif;
-  background: #012c5c; /* dark blue */
+  background: #012145; /* dark blue */
   color: #ffffff;
+}
+
+/* outline for font */
+.text-outline {
+  color: #ffe53b;                     /* inside fill color */
+  -webkit-text-stroke: 1.2px #1700e9;   /* outline stroke */    
+}
+
+.text-outline-body {
+  color: #ffe53b;                   
+  -webkit-text-stroke: 0.5px #7d6fff;  /* much thinner */
+  
 }
 
 /*  inner padding for header & footer */
@@ -44,6 +56,18 @@ header nav a:hover {
   text-decoration: underline;
 }
 
+
+/* labelling page headings */
+
+.section-label {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 0 1.5rem;
+  display: inline-block;
+  background: #bbdcfe;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 6px 6px 0 rgba(251, 86, 36, 0.4);
+}
 
 
 /*  main content  */
@@ -266,35 +290,12 @@ footer {
   font-size: 0.9rem;
 }
 
-/* yellow label headings */
-.career-subheading {
-  display: inline-block;
-  background: #ffe53b;
-  padding: 0.35rem 0.75rem;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-}
 
-.career-subheading.small {
-  margin-top: 1rem;
-}
 
 .career-column ul {
   padding-left: 1.1rem;
   margin-top: 0.25rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -328,7 +329,8 @@ footer {
 
 .pipeline-small {
   min-height: 100px;
-  min-width: 300px;
+  min-width: 0;       /* allows columns to shrink */
+  width: 90%;
 
   border-radius: 16px;
   background: #01346f;
@@ -363,6 +365,148 @@ footer {
 
   line-height: 1.4;
 }
+
+
+
+
+
+
+/* ------------- SOFTWARE TABLE -------------  */
+
+/* wrapper so the table can scroll on small screens */
+.software-table-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  border: 4px solid #024a8b;
+  background: #f2ff9c;
+  overflow-x: auto;              /* horizontal scroll on mobile */
+}
+
+/* actual table */
+.software-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;    
+  color: black; 
+}
+
+/* header row */
+.software-table thead {
+  background: #ffe53b;
+}
+
+.software-table th,
+.software-table td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e7f57a;     /* grid lines */
+  text-align: left;
+  vertical-align: top;
+  font-size: 0.9rem;
+}
+
+/* software links */
+.software-table a {
+  color: #024a8b;
+  text-decoration: underline;
+}
+
+
+
+
+
+/* ----- RESOURCES PAGE -----  */
+
+
+.communities-section {
+  background: #9cff9e;   /* light green/yellow */
+}
+
+.tutorials-section {
+  background: #ffb85c;   
+}
+
+.resource-section {
+  padding: 2rem 1.5rem 3rem;
+  color: #000000; /* text */
+}
+
+.resource-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 0 1.5rem;
+  display: inline-block;
+  background: #ffd3a3;           /* light orange */
+  padding: 0.5rem 1.5rem;
+  box-shadow: 6px 6px 0 #fbbf24; /* orange shadow bar */
+}
+
+/* intro paragraph row under the heading */
+.resource-section .row {
+  margin: 0 0 1.5rem;
+}
+
+.resource-section .row p {
+  max-width: 50rem;
+  text-align: center;
+}
+
+/* one community "card" row: logo left, text right */
+.resource-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: center;      
+  margin-top: 2rem;
+}
+
+.resource-image {
+  padding: 0.5rem 1.5rem;
+  flex: 0 0 160px;      
+  height: 160px;       
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.resource-image img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+  display: block;
+}
+
+/* text column on the right */
+.resource-columns {
+  flex: 1;
+}
+
+.resource-column {
+  font-size: 0.95rem;
+}
+
+.resource-subheading {
+  color: #ffdd02;                     
+  -webkit-text-stroke: 1.5px #000000; 
+  font-size: 2.5rem;
+  display: block;     
+  margin-bottom: 0.5rem;
+}
+
+.resource-column p {
+  margin-top: 0;
+  line-height: 1.6;
+}
+
+/* link styling */
+.resource-column a {
+  color: #024a8b;
+  text-decoration: underline;
+}
+
+
+
+
+
 
 
 /* ------------ MOBILE STUFF ---------------- */

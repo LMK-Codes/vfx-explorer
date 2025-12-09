@@ -169,9 +169,8 @@ footer {
 
 /* ---------- CAREERS PAGE ---------- */
 
-/* intro block */
 .careers-hero {
-  background: #024a8b;          /* dark blue strip */
+  background: #024a8b;          
   padding: 2rem 1.5rem;
   text-align: center;
 }
@@ -185,27 +184,35 @@ footer {
   max-width: 40rem;
 }
 
-/* subnav links for roles */
+
 .career-subnav {
-  background: #f2ff9c;          /* light green */
+  background: #f2ff9c;
   padding: 0.75rem 1.5rem;
+
   display: flex;
-  flex-wrap: wrap;
   gap: 0.75rem;
+
+  overflow-x: auto;             /* enable horizontal scroll */
+  overflow-y: hidden;
+  white-space: nowrap;          /* keep pills on one line */
+  -webkit-overflow-scrolling: touch; /* smooth scroll on mobile */
+  scroll-snap-type: x mandatory;
 }
 
 .career-subnav a {
   color: #024a8b;
   text-decoration: none;
   font-size: 0.9rem;
-  padding: 0.3rem 0.7rem;
-  background: #ffd3a3;          /* peach pill */
+  padding: 0.3rem 0.9rem;
+  background: #ffd3a3;
   border-radius: 999px;
+
+  flex: 0 0 auto;               /* don’t let them shrink */
+  scroll-snap-align: start;     /* snap each pill when scrolling */
 }
 
-/* main FX Artist block */
 .career-section {
-  background: #f2ff9c;          /* light green */
+  background: #f2ff9c;         
   padding: 2rem 1.5rem 3rem;
   color: #111;
 }
@@ -217,7 +224,7 @@ footer {
   display: inline-block;
   background: #ffd3a3;
   padding: 0.5rem 1.5rem;
-  box-shadow: 6px 6px 0 #fbbf24;  /* fake drop shadow */
+  box-shadow: 6px 6px 0 #fbbf24;  /* drop shadow */
 }
 
 /* layout: image left, text right */
@@ -227,7 +234,7 @@ footer {
   align-items: flex-start;
 }
 
-/* big image box */
+/* image box */
 .career-image {
   flex: 0 0 40%;
   max-width: 340px;
@@ -281,6 +288,16 @@ footer {
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* ----------- PIPELINE ----------- */
 .pipeline-grid {
   max-width: 1200px;
@@ -310,20 +327,42 @@ footer {
 }
 
 .pipeline-small {
-  min-height: 110px;
+  min-height: 100px;
+  min-width: 300px;
+
   border-radius: 16px;
   background: #01346f;
   box-shadow: 6px 6px 0 #0e0462;
 
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  font-weight: 600;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+
+  padding: 1rem 1rem;   
   color: white;
 }
 
+/* TITLE */
+.pipeline-small h3 {
+  font-size: 2rem;        
+  font-weight: 700;
 
+  margin-top: 0;          
+  margin-bottom: 0;   
+
+  line-height: 1.2;
+}
+
+/* DESCRIPTION */
+.pipeline-small p {
+  font-size: 1.5rem;         
+  font-weight: 400;
+
+  margin: 0;             
+
+  line-height: 1.4;
+}
 
 
 /* ------------ MOBILE STUFF ---------------- */

@@ -1,19 +1,19 @@
 body {
   margin: 0;
   font-family: "Istok Web", sans-serif;
-  background: #012145; /* dark blue bg */
+  background: #080145; /* dark blue bg */
   color: #ffffff; /* global font colour */
 }
 
 /* outline for font */
 .text-outline {
   color: #ffe53b;                     /* inside fill colour */
-  -webkit-text-stroke: 1.2px #1700e9;   /* outline stroke */    
+  -webkit-text-stroke: 1.5px #000000;   /* outline stroke */    
 }
 
 .text-outline-body {
   color: #ffe53b;                   
-  -webkit-text-stroke: 0.5px #7d6fff;  
+  -webkit-text-stroke: 0.2px #000000;  
 }
 
 /*  inner padding for header & footer */
@@ -171,7 +171,7 @@ p {
 
   width: 200px;
   padding: 0.75rem 1.5rem;
-  background: #3848c3;
+  background: #1124b5;
 
   color: #ffe53b;
   -webkit-text-stroke: 0.7px #000000;
@@ -575,6 +575,10 @@ header nav a {
 
 /* softens text outline */
 @media (max-width: 700px) {
+  .logo-text {
+    font-weight: 800;
+    -webkit-text-stroke: 0.6px #000000;
+  }
   .nav-text {
       color: #000000;                  
   }

@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: "Istok Web", sans-serif;
   /* background: #0008ff; dark blue bg */
-  background: #034566; /* dark blue bg */
+  background: #270366; /* dark blue bg */
   color: #ffffff; /* global font colour */
 }
 
@@ -665,8 +665,9 @@ header nav a { /* links */
   }
 
   .logo-text {
-    font-size: 1.25rem;          /* tweak as you like */
-    -webkit-text-stroke: 0.3px #000;   /* super-thin, or set to 0 to remove */
+    font-size: 1.25rem;         
+    -webkit-text-stroke: 0px; 
+    color: #000;
   }
 
   /* nav links – no outline, just solid colour */
@@ -701,9 +702,9 @@ header nav a { /* links */
     -webkit-text-stroke: 0; 
   }
 
-    .quiz-result-header {
+  .quiz-result-header {
     font-size: 1.3rem;
-    -webkit-text-stroke: 0;      /* remove the chunky stroke */
+    -webkit-text-stroke: 0;
   }
 
   /* resources subheadings */
@@ -712,6 +713,7 @@ header nav a { /* links */
   {
     font-size: 1.4rem;
     -webkit-text-stroke: 0;      /* no outline */
+    
   }
 }
 

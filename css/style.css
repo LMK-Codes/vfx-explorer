@@ -1,7 +1,8 @@
 body {
   margin: 0;
   font-family: "Istok Web", sans-serif;
-  background: #0008ff; /* dark blue bg */
+  /* background: #0008ff; dark blue bg */
+  background: #03665e; /* dark blue bg */
   color: #ffffff; /* global font colour */
 }
 
@@ -638,70 +639,74 @@ header nav a { /* links */
 /* typography for mobile */
 @media (max-width: 700px) {
 
-  /* global text is smaller */
+  /* base text size */
   body {
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.5;
   }
 
-  /* resize page headings */
+  /* page section headings like “Welcome!”, “Careers in VFX”, etc. */
   .section-label {
-    font-size: 1.6rem;           /* was 2rem */
+    font-size: 1.6rem;
     padding: 0.4rem 1.25rem;
   }
 
-  /* redo outlines to fit */
-  .text-outline {
-    font-weight: 700;          
-    -webkit-text-stroke: 1px #000;  /* thinner outline */
+  /* TURN OFF heavy outline on small screens */
+  .text-outline,
+  .section-label.text-outline,
+  .quiz-heading.text-outline,
+  .hero-title.text-outline {
+    -webkit-text-stroke: 0;
   }
 
-  /* resize intro / body text */
-  .text-body,
-  .row p {
-    font-size: 1.05rem;         /* slightly smaller than desktop */
-    line-height: 1.5;
-    padding: 0 0.5rem;          /* small side padding so text isn’t edge-to-edge */
-  }
-
-  /* resize logo text */
+  /* logo in header */
   .logo {
     font-size: 20px;
-    -webkit-text-stroke: 1px #000;
   }
 
-  /* logo text stroke lighter on mobile */
   .logo-text {
-    -webkit-text-stroke: 0.6px #1700e9; 
+    /* keep a *tiny* outline so it still feels logo-ish */
+    -webkit-text-stroke: 0.5px #000;
   }
-  
-  /* remove stroke on nav links */
+
+  /* nav links – no outline, just solid colour */
   .nav-text {
+    font-size: 0.95rem;
     -webkit-text-stroke: 0;
-    color: #2374ff; 
+    color: #2374ff;
   }
 
-  /* resize quiz text - question titles */
+  /* main intro / body text */
+  .text-body,
+  .row p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    padding: 0 0.5rem;   /* keeps text away from screen edges */
+  }
+
+  /* quiz questions */
   .quiz-question h2 {
-    font-size: 1.3rem;
-    -webkit-text-stroke: 0.6px #000;   /* softer outline on small screens */
+    font-size: 1.25rem;
+    -webkit-text-stroke: 0;   /* no outline on questions */
   }
 
-  /* resize quiz text - answers */
+  /* quiz answers text */
   .quiz-text {
     font-size: 1rem;
   }
 
-  /* resize subheadings on resource page */
+  /* quiz result card */
+  .quiz-result-title {
+    font-size: 1.5rem;
+  }
+
+  /* careers / resources subheadings */
+  .career-subheading,
   .resource-subheading {
-    font-size: 1.8rem;          /* was 2.5rem */
+    font-size: 1.6rem;  /* smaller than desktop */
   }
-
-  /* resize subheadings on careers page */
-  .career-subheading {
-    font-size: 1.8rem;          /* was 2.5rem */
-  }
-
 }
+
 
 
 

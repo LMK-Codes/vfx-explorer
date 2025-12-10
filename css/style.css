@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: "Istok Web", sans-serif;
   /* background: #0008ff; dark blue bg */
-  background: #03665e; /* dark blue bg */
+  background: #660361; /* dark blue bg */
   color: #ffffff; /* global font colour */
 }
 
@@ -665,8 +665,8 @@ header nav a { /* links */
   }
 
   .logo-text {
-    /* keep a *tiny* outline so it still feels logo-ish */
-    -webkit-text-stroke: 0.5px #000;
+    font-size: 1.25rem;          /* tweak as you like */
+    -webkit-text-stroke: 0.3px #000;   /* super-thin, or set to 0 to remove */
   }
 
   /* nav links – no outline, just solid colour */
@@ -698,12 +698,23 @@ header nav a { /* links */
   /* quiz result card */
   .quiz-result-title {
     font-size: 1.5rem;
+        -webkit-text-stroke: 0; 
   }
 
-  /* careers / resources subheadings */
-  .career-subheading,
+    .quiz-result-header {
+    font-size: 1.3rem;
+    -webkit-text-stroke: 0;      /* remove the chunky stroke */
+  }
+
+  /* resources subheadings */
   .resource-subheading {
-    font-size: 1.6rem;  /* smaller than desktop */
+    font-size: 1.4rem;
+    -webkit-text-stroke: 0;      /* no outline */
+  }
+
+  .resource-title {
+    font-size: 1.6rem;           /* smaller than desktop */
+    -webkit-text-stroke: 0;      /* kill outline on mobile */
   }
 }
 

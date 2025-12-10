@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: "Istok Web", sans-serif;
   /* background: #0008ff; dark blue bg */
-  background: #270366; /* dark blue bg */
+  background: #03661f; /* dark blue bg */
   color: #ffffff; /* global font colour */
 }
 
@@ -657,6 +657,7 @@ header nav a { /* links */
   .quiz-heading.text-outline,
   .hero-title.text-outline {
     -webkit-text-stroke: 0;
+    color: #080f38;
   }
 
   /* logo in header */
@@ -689,6 +690,7 @@ header nav a { /* links */
   .quiz-question h2 {
     font-size: 1.25rem;
     -webkit-text-stroke: 0;   /* no outline on questions */
+    color: #000;
   }
 
   /* quiz answers text */
@@ -700,11 +702,13 @@ header nav a { /* links */
   .quiz-result-title {
     font-size: 1.5rem;
     -webkit-text-stroke: 0; 
+    color: #000;
   }
 
   .quiz-result-header {
     font-size: 1.3rem;
     -webkit-text-stroke: 0;
+    color: #000;
   }
 
   /* resources subheadings */
@@ -713,7 +717,7 @@ header nav a { /* links */
   {
     font-size: 1.4rem;
     -webkit-text-stroke: 0;      /* no outline */
-    
+    color: #000;
   }
 }
 

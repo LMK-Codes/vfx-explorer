@@ -668,6 +668,22 @@ header nav a { /* links */
     -webkit-text-stroke: 1px #000;
   }
 
+  /* logo text stroke lighter on mobile */
+  .logo-text {
+    -webkit-text-stroke: 0.6px #1700e9; 
+  }
+
+  /* headings text stroke lighter on mobile */
+  .text-outline {
+    -webkit-text-stroke: 0.8px #000; 
+  }
+
+  /* remove stroke on nav links */
+  .nav-text {
+    -webkit-text-stroke: 0;
+    color: #2374ff; 
+  }
+
   /* resize quiz text - question titles */
   .quiz-question h2 {
     font-size: 1.3rem;
@@ -681,6 +697,11 @@ header nav a { /* links */
 
   /* resize subheadings on resource page */
   .resource-subheading {
+    font-size: 1.8rem;          /* was 2.5rem */
+  }
+
+  /* resize subheadings on careers page */
+  .career-subheading {
     font-size: 1.8rem;          /* was 2.5rem */
   }
 

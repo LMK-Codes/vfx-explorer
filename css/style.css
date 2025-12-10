@@ -579,14 +579,14 @@ header nav a {
       color: #000000;                  
   }
   .text-outline {
-    -webkit-text-stroke: 0.5px #1700e9;   
+    -webkit-text-stroke: 0px #1700e9;   
   }
   .text-outline-body {
-    -webkit-text-stroke: 0.5px #7d6fff;  
+    -webkit-text-stroke: 0px #7d6fff;  
   }
   .resource-subheading {
     color: #ffdd02;                     
-    -webkit-text-stroke: 0.5px #000000; 
+    -webkit-text-stroke: 0px #000000; 
     font-size: 2.5rem;
     display: block;     
     margin-bottom: 0.5rem;
@@ -600,7 +600,7 @@ header nav a {
     background: #3848c3;
 
     color: #ffe53b;
-    -webkit-text-stroke: 0.2px #000000;
+    -webkit-text-stroke: 0px #000000;
     font-weight: 750;
     border-radius: 7px;
     text-decoration: none;
@@ -610,8 +610,9 @@ header nav a {
     font-weight: 700;
     text-decoration: none;
     color: #f9ad7d;         
-    -webkit-text-stroke: 0.5px #024a8b;   
+    -webkit-text-stroke: 0px #024a8b;   
   }
+
 }
 
 

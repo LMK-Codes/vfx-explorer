@@ -1,87 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"> <!-- character encoding -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- layout for mobile -->
-  <title>VFX Explorer – Home</title>
-  <link rel="icon" type="image/png" href="images/logo.png"> <!-- icon -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <head>
+    <meta charset="UTF-8"> <!-- character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- layout for mobile -->
+    <title>VFX Explorer – Home</title> <!-- page title -->
+    <link rel="icon" type="image/png" href="images/logo.png"> <!-- icon -->
+    <link rel="stylesheet" href="css/style.css"> <!-- css link -->
+  </head>
 
+  <body id="top">
+    <!-- HEADER -->
+    <header>
+      <div class="logo"> <!-- logo image & site name -->
+          <img src="images/logo.png" alt="VFX Explorer Logo" class="logo-img">
+          <span class="logo-text">VFX Explorer</span>
+      </div>
+      <button class="nav-toggle">☰</button> <!--- MOBILE NAV -->
+      <nav>
+        <a href="index.html" class="nav-link"> 
+          <span class="nav-text">Home</span>
+        </a>
+        <a href="pipeline.html" class="nav-link">
+          <span class="nav-text">The Pipeline</span>
+        </a>
+        <a href="careers.html" class="nav-link">
+          <span class="nav-text">Careers</span>
+        </a>
+        <a href="software.html" class="nav-link">
+          <span class="nav-text">Software</span>
+        </a>
+        <a href="careerquiz.html" class="nav-link">
+          <span class="nav-text">Career Quiz</span>
+        </a>
+        <a href="resources.html" class="nav-link">
+          <span class="nav-text">Resources</span>
+        </a>
+      </nav>
+    </header>
 
-<body id="top">
-  <!-- HEADER -->
-  <header>
-    <div class="logo"> 
-        <img src="images/logo.png" alt="VFX Explorer Logo" class="logo-img">
-        <span class="logo-text">VFX Explorer</span>
-    </div>
-    
-    <button class="nav-toggle">☰</button> <!--- MOBILE NAV -->
-    <nav>
-      <a href="index.html" class="nav-link">
-        <span class="nav-text">Home</span>
-      </a>
+    <!-- MAIN CONTENT -->
+    <main>
+      <!-- page intro  -->
+      <div class="row">
+        <h1 class="section-label text-outline">Welcome!</h1> 
+      </div>
+      <div class="row"> 
+        <p class="text-body">
+        Interested in movie magic? This site helps beginners 
+        explore exactly how visual effects are made,  from 
+        concept, to development, to final product.
+        </p>
+      </div>
 
-      <a href="pipeline.html" class="nav-link">
-        <span class="nav-text">The Pipeline</span>
-      </a>
+      <!-- image carousel -->
+      <div class="hero-image">
+        <button class="arrow left" onclick="prevImage()">&larr;</button>
+        <img id="hero-img" src="images/vfx-infinity_war.jpg" alt="VFX image">
+        <button class="arrow right" onclick="nextImage()">&rarr;</button>
+      </div>
+      
+      <!-- career quiz button -->
+      <div class="row">
+        <a class="btn-primary" href="careerquiz.html">Take the Career Quiz</a>
+      </div>
 
-      <a href="careers.html" class="nav-link">
-        <span class="nav-text">Careers</span>
-      </a>
+    </main>
 
-      <a href="software.html" class="nav-link">
-        <span class="nav-text">Software</span>
-      </a>
+    <!-- FOOTER -->
+    <footer>
+      <p>Laila Mariam Imran – Built with HTML, CSS, & JS</p>
+    </footer>
 
-      <a href="careerquiz.html" class="nav-link">
-        <span class="nav-text">Career Quiz</span>
-      </a>
+    <a href="#top" class="back-to-top">Back to top</a> <!-- back to top button-->
+    <script src="script.js"></script> <!-- javascript link -->
 
-      <a href="resources.html" class="nav-link">
-        <span class="nav-text">Resources</span>
-      </a>
-
-    </nav>
-
-  </header>
-
-  <!-- MAIN CONTENT -->
-  <main>
-
-    <div class="row">
-      <h1 class="section-label text-outline">Welcome!</h1> 
-    </div>
-    <div class="row"> 
-      <p class="text-body">
-      Interested in movie magic? This site helps beginners 
-      explore exactly how visual effects are made,  from 
-      concept, to development, to final product.
-      </p>
-    </div>
-
-    <div class="hero-image">
-      <button class="arrow left" onclick="prevImage()">&larr;</button>
-      <img id="hero-img" src="images/vfx-infinity_war.jpg" alt="VFX image">
-      <button class="arrow right" onclick="nextImage()">&rarr;</button>
-    </div>
-    
-    <div class="row">
-      <a class="btn-primary" href="careerquiz.html">Take the Career Quiz</a>
-    </div>
-
-  </main>
-
-
-  <!-- FOOTER -->
-  <footer>
-    <p>Laila Mariam Imran – Built with HTML, CSS, & JS</p>
-  </footer>
-
-  <a href="#top" class="back-to-top">Back to top</a>
-
-  <script src="script.js"></script>
+  </body>
   
-</body>
 </html>

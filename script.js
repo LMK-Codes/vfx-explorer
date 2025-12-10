@@ -113,7 +113,6 @@
             { name: "FX Artist", url: "careers.html#fx-artist" }
         ],
         4: [
-            { name: "Lighting Artist", url: "careers.html#lighting-artist" },
             { name: "Compositor", url: "careers.html#compositor" }
         ]
     };

@@ -33,37 +33,16 @@ body {
   color: #2374ff;
   font-size: 15px;
   font-weight: 700;
-  -webkit-text-stroke: 0;
 }
+
 
 header nav a:hover {
   text-decoration: underline; /* shows an underline when you hover over navigation links */
 }
 
 
-h1 { /* main page headings  */
-  margin: 0 auto;
-  font-size: 2rem;
-}
-p { /* paragraph text */
-  margin: 0 auto;
-  line-height: 1.5;
-}
-
-
-.row { /* row container (centers content horizontally & vertically) */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
-}
-.row p { /* center-align text inside row containers */
-  text-align: center;
-}
-
-/* layout */
-header, footer /*  inner padding for header & footer */
-{
+/* global layouts */
+header, footer{ /*  inner padding for header & footer */
   padding: 0.75rem 1rem;
 }
 main { /*  centers whole page */
@@ -82,6 +61,11 @@ header { /* header / nav layout  */
   top: 0;             
   z-index: 1000; 
 }
+footer { /* footer content */
+  text-align: center;
+  font-size: 0.8rem;
+  background: #001934;
+}
 .section-label { /* labels for page headings */
   text-align: center;
   font-size: 2rem;
@@ -90,6 +74,23 @@ header { /* header / nav layout  */
   background: #bbdcfe;
   padding: 0.5rem 1.5rem;
   box-shadow: 6px 6px 0 rgba(251, 86, 36, 0.4);
+}
+h1 { /* main page headings  */
+  margin: 0 auto;
+  font-size: 2rem;
+}
+p { /* paragraph text */
+  margin: 0 auto;
+  line-height: 1.5;
+}
+.row { /* row container (centers content horizontally & vertically) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.row p { /* center-align text inside row containers */
+  text-align: center;
 }
 
 
@@ -129,11 +130,11 @@ header { /* header / nav layout  */
   font-size: 1.5rem;
   cursor: pointer;
 }
-.hero-image .left { /* left arrow */
-  left: -2.5rem;   /* adjust outward from the box */
+.hero-image .left { /* left arrow adjustment */
+  left: -2.5rem;   
 }
-.hero-image .right { /* right arrow */
-  right: -2.5rem;  /* adjust outward from the box */
+.hero-image .right { /* right arrow adjustment */
+  right: -2.5rem;  
 }
 
 .hero-buttons {
@@ -166,12 +167,6 @@ header { /* header / nav layout  */
   text-decoration: none;
 }
 
-/* footer */
-footer {
-  text-align: center;
-  font-size: 0.8rem;
-  background: #001934;
-}
 
 /* back to top button (fixed positioning) */
 .back-to-top {
@@ -679,41 +674,7 @@ header nav a { /* links */
 /* typography for mobile */
 @media (max-width: 700px) {
 
-  /* removes heavy outlines on small screens */
-  .logo,
-  .logo-text,
-  .text-outline,
-  .resource-subheading {
-    -webkit-text-stroke: 0;
-  }
-
-  /* keep logo readable */
-  .logo-text {
-    -webkit-text-stroke: 0.6px #000;
-    font-weight: 800;
-  }
-
-  /* nav links: dark, simple text */
-  .nav-text {
-    color: #000000;
-    -webkit-text-stroke: 0;
-  }
-
-  /* hero/body outlined text – just fill on mobile */
-  .text-outline-body {
-    -webkit-text-stroke: 0;
-  }
-
-  /* buttons: no stroke */
-  .btn-primary {
-    -webkit-text-stroke: 0;
-  }
-
-  /* resources subnav links: no stroke, slightly smaller */
-  .resource-subnav a {
-    -webkit-text-stroke: 0;
-    font-size: 1.5rem;
-  }
+  
 }
 
 

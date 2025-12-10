@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VFX Explorer – Career Quiz</title>
+    <link rel="icon" type="image/png" href="images/logo.png"> <!-- icon -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body id="top">
+    <!-- HEADER -->
+    <header>
+      <div class="logo"> 
+          <img src="images/logo.png" alt="VFX Explorer Logo" class="logo-img">
+          <span class="logo-text">VFX Explorer</span>
+      </div>
+      <button class="nav-toggle">☰</button> <!--- MOBILE NAV -->
+      <nav>
+        <a href="index.html" class="nav-link">
+          <span class="nav-text">Home</span>
+        </a>
+        <a href="pipeline.html" class="nav-link">
+          <span class="nav-text">The Pipeline</span>
+        </a>
+        <a href="careers.html" class="nav-link">
+          <span class="nav-text">Careers</span>
+        </a>
+        <a href="software.html" class="nav-link">
+          <span class="nav-text">Software</span>
+        </a>
+        <a href="careerquiz.html" class="nav-link">
+          <span class="nav-text">Career Quiz</span>
+        </a>
+        <a href="resources.html" class="nav-link">
+          <span class="nav-text">Resources</span>
+        </a>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <!-- intro -->
+      <div class="row">
+        <h1 class="section-label text-outline">The Career Quiz</h1> 
+      </div>
+      <div class="row"> 
+        <p class="text-body">
+        Keep in mind that many VFX roles are interconnected, 
+        and you don't need to lock yourself into one specific 
+        career path. This quiz is simply meant to be informative. 
+        Focus on building skills in the areas you enjoy, and 
+        the right opportunities will follow! 
+        </p>
+      </div>
+
+      <!-- quiz section -->
+      
+      <section id="quiz-form" class="quiz-section quiz-form">
+
+        <!-- 
+        label creates the clickable element
+        input type radio creates a radio button
+        (multiple choice + one option) 
+        name specifies the option to the same element
+        value is the score being recorded in js 
+        -->
+
+        <!-- Question 1 -->
+        <div class="quiz-question quiz-content">
+          <h2>What part of a project interests you most?</h2>
+          <label class="quiz-text">
+            <input type="radio" name="q1" value="1">
+            Coming up with ideas, designing visuals, exploring style.
+          </label>
+          <label class="quiz-text">
+            <input type="radio" name="q1" value="2">
+            Building models, shaping forms, refining details.
+          </label>
+          <label class="quiz-text">
+            <input type="radio" name="q1" value="3">
+            Movement, timing, action, physics.
+          </label>
+          <label class="quiz-text">
+            <input type="radio" name="q1" value="4">
+            Mood, lighting, atmosphere, cinematic polish.
+          </label>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="quiz-question quiz-content">
+          <h2>Which activity sounds the most fun to you?</h2>
+          <label class="quiz-text">
+            <input type="radio" name="q2" value="1">
+            Sketching characters or environments.
+          </label>
+          <label class="quiz-text">
+            <input type="radio" name="q2" value="2">
+            Sculpting or modeling objects in 3D.
+          </label>
+          <label class="quiz-text">
+            <input type="radio" name="q2" value="3">
+            Animating scenes or creating particle effects.
+          </label>
+          <label class="quiz-text">
+            <input type="radio" name="q2" value="4">
+            Adjusting colour, lighting, and depth to make a shot feel cinematic.
+          </label>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="quiz-question quiz-content">
+          <h2>Which tools appeal to you the most?</h2>
+          <label class="quiz-text">
+            <input type="radio" name="q3" value="1">
+            Drawing tablet, Procreate, Photoshop.
+          </label>
+          <label class="quiz-text">
+            <input type="radio" name="q3" value="2">
+            Maya, Blender, ZBrush, Substance Painter.
+          </label>
+          <label class="quiz-text">
+            <input type="radio" name="q3" value="3">
+            Houdini, animation rigs, particle systems.
+          </label>
+          <label class="quiz-text">
+            <input type="radio" name="q3" value="4">
+            Nuke, DaVinci Resolve, lighting or rendering tools.
+          </label>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="quiz-question quiz-content">
+          <h2>What do you notice first when watching a movie scene?</h2>
+          <label class="quiz-text">
+            <input type="radio" name="q4" value="1">
+            The art style, shapes, and worldbuilding.
+          </label>
+          <label class="quiz-text">
+            <input type="radio" name="q4" value="2">
+            The environments, props, and creature/character models.
+          </label>
+          <label class="quiz-text">
+            <input type="radio" name="q4" value="3">
+            How things move — animation, action, effects.
+          </label>
+          <label class="quiz-text">
+            <input type="radio" name="q4" value="4">
+            The lighting, colour palette, and overall mood.
+          </label>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="quiz-question quiz-content">
+          <h2>Which task would you happily spend hours on?</h2>
+          <label class="quiz-text">
+            <input type="radio" name="q5" value="1">
+            Brainstorming visuals and sketching ideas.
+          </label>
+          <label class="quiz-text">
+            <input type="radio" name="q5" value="2">
+            Polishing textures or small 3D details.
+          </label>
+          <label class="quiz-text">
+            <input type="radio" name="q5" value="3">
+            Tuning motion, timing, or physical effects.
+          </label>
+          <label class="quiz-text">
+            <input type="radio" name="q5" value="4">
+            Perfecting light, colour, shadows, and blending layers.
+          </label>
+        </div>
+
+        <!-- next button -->
+        <button type="button" id="quiz-next" class="btn quiz-submit">
+          Next
+        </button>
+
+      </section>
+
+      <section id="quiz-result" class="quiz-result" hidden>
+        
+        <div class="quiz-result-header">Your VFX Result</div>
+
+        <!-- select result based on the values recorded by javascript -->
+        <h2 id="quiz-result-title" class="quiz-result-title"></h2> 
+        <p id="quiz-result-body" class="quiz-result-body"></p>
+        <div class="result-links" id="result-links"></div>
+
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>Laila Mariam Imran – Built with HTML, CSS, & JS</p>
+    </footer>
+
+    <a href="#top" class="back-to-top">Back to top</a>
+    <script src="script.js"></script>
+
+  </body>
+
+</html>

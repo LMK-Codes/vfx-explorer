@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "Istok Web", sans-serif;
-  background: #090246; /* dark blue bg */
+  background: #080b65; /* dark blue bg */
   color: #ffffff; /* global font colour */
 }
 
@@ -428,6 +428,117 @@ footer {
 }
 
 
+
+/* ------QUIZ PAGE ----- */
+
+.quiz-section {
+  background: #7fbbff; 
+  
+  display: flex;
+  justify-content: center; 
+
+  padding: 60px 20px;
+  border-radius: 12px;
+
+  max-width: 900px;   /* width of the card */
+  margin: 0 auto;
+}
+
+.quiz-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* centers the inner content block */
+.quiz-content {
+  max-width: 700px;     /* width like your reference image */
+  margin: 0 auto;       /* center it horizontally */
+  text-align: left;     /* keep text readable */
+}
+
+/* question title centered ONLY */
+.quiz-question h2 {
+  color: #f2ff00;
+  -webkit-text-stroke: 0.5px #000000;
+
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* answer options left-aligned inside centered block */
+.quiz-question label {
+  display: block;
+  margin: 8px 0;
+}
+
+.quiz-text{
+  color: #000e01;
+
+  font-size: larger;
+}
+
+.quiz-submit {
+  align-self: center;    
+  margin-top: 24px;
+  padding: 12px 32px;
+  border-radius: 8px;
+  background: #ffe53b;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid #000;
+}
+
+.quiz-result-header {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffe53b;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-weight: 900;
+  -webkit-text-stroke: 1px #000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+.quiz-result {
+  max-width: 650px;
+  margin: 3.5rem auto 0;
+  background: #7fffd4; /* light aqua like your wireframe */
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  border: 4px solid #000;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+
+.quiz-result-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ff8c00;
+  margin-bottom: 16px;
+}
+
+.quiz-result-body {
+  font-size: 1.1rem;
+  color: #000;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.result-links a {
+  display: block;
+  font-size: 1.2rem;
+  margin: 6px 0;
+  color: #0000ee;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+
+
 /* ----- RESOURCES PAGE -----  */
 
 .communities-section {
@@ -574,7 +685,7 @@ header nav a {
 /* typography for mobile */
 @media (max-width: 700px) {
 
-  /* remove heavy outlines on small screens */
+  /* removes heavy outlines on small screens */
   .logo,
   .logo-text,
   .text-outline,
@@ -584,6 +695,7 @@ header nav a {
 
   /* keep logo readable */
   .logo-text {
+    -webkit-text-stroke: 0.6px #000;
     font-weight: 800;
   }
 

@@ -10,7 +10,6 @@ body {
   color: #05ff8a;
   -webkit-text-stroke: 1.2px #000000;
   font-size: 25px;
-  font-weight: 900;
 }
 .logo-img { /* logo image size */
   height: 24px;
@@ -92,9 +91,7 @@ p { /* paragraph text */
 .row p { /* center-align text inside row containers */
   text-align: center;
 }
-
-/* prevents headings getting cutoff */
-.link-target {
+.link-target { /* prevents headings getting cutoff */
   scroll-margin-top: 120px;
 }
 
@@ -105,7 +102,7 @@ p { /* paragraph text */
 
 /* image carousel  */
 
-.hero-image { /* container */
+.hero-image { /* image container (size, layout, background) */
   position: relative; 
   width: 50%;
   max-width: 24rem;
@@ -117,13 +114,13 @@ p { /* paragraph text */
   align-items: center;
   justify-content: center;
 }
-.hero-image img { /* image */
+.hero-image img { /* image layout */
   width: 85%;      
   height: auto;
   display: block;
 }
 
-.hero-image .arrow { /* arrow styles */
+.hero-image .arrow { /* arrow styling */
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -140,14 +137,13 @@ p { /* paragraph text */
 .hero-image .right { /* right arrow adjustment */
   right: -2.5rem;  
 }
-
-.hero-buttons {
+.hero-buttons { /* container for slide buttons */
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-top: 10px;
 }
-.hero-buttons button {
+.hero-buttons button { /* styling for slide buttons */
   background: #ffe53b;
   border: 2px solid #ccad00;
   padding: 0.4rem 0.8rem;
@@ -156,7 +152,7 @@ p { /* paragraph text */
   border-radius: 6px;
 }
 
-.btn-primary { /* quiz button */
+.btn-primary { /* container for quiz button */
   display: block;
   text-align: center;
 
@@ -192,22 +188,7 @@ p { /* paragraph text */
 
 /* ---------- CAREERS PAGE ---------- */
 
-.careers-hero {
-  background: #024a8b;          
-  padding: 2rem 1.5rem;
-  text-align: center;
-}
-
-.careers-hero h1 {
-  margin-bottom: 0.75rem;
-}
-
-.careers-hero p {
-  margin: 0 auto;
-  max-width: 40rem;
-}
-
-.career-subnav {
+.career-subnav { /* subnavigation bar (style, layout, scrollability) */
   background: #f2ff9c;
   padding: 0.75rem 1.5rem;
 
@@ -215,15 +196,13 @@ p { /* paragraph text */
   justify-content: flex-start;
   gap: 0.75rem;
 
-  overflow-x: auto;             /* enable horizontal scroll */
-  overflow-y: hidden;
+  overflow-x: auto;             /* horizontal scroll */
   -webkit-overflow-scrolling: touch; /* scroll on mobile */
 
-  scroll-snap-type: x mandatory;
-  scroll-padding-inline: 1.5rem;    /* padding so pills doesn’t get cut off */
+  scroll-snap-type: x mandatory; /* enables snapping to prevent cutoff while scrolling */
+  scroll-padding-inline: 1.5rem;    /* padding so pills don’t get cut off */
 }
-
-.career-subnav a {
+.career-subnav a { /* styling for pills inside subnav */
   color: #024a8b;
   text-decoration: none;
   font-size: 0.9rem;
@@ -231,35 +210,36 @@ p { /* paragraph text */
   background: #ffd3a3;
   border-radius: 999px;
 
-  flex: 0 0 auto;               /* don’t let them shrink */
-  scroll-snap-align: start;     /* snap each pill when scrolling */
+  flex: 0 0 auto;               /* prevents pills from shrinking & adjusts to text */
+  scroll-snap-align: start;     /* aligns pills to the left edge of the container */
 }
 
-.career-section {
+.career-section { /* container for page */
   background: #f2ff9c;         
-  padding: 2rem 1.5rem 3rem;
+  padding: 2rem 1.5rem 0.05rem;
   color: #111;
 }
-
-.career-title {
+.career-title { /* container for titles */
   text-align: center;
   font-size: 2rem;
   margin: 0 0 1.5rem;
   display: inline-block;
   background: #ffd3a3;
   padding: 0.5rem 1.5rem;
-  box-shadow: 6px 6px 0 #fbbf24;  /* drop shadow */
+  box-shadow: 6px 6px 0 #fbbf24;  
+}
+.career-subheading { /* subheading style (width, colour, padding, font) */
+  display: inline-block;
+  background: #ffe53b;
+  padding: 0.35rem 0.75rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  box-shadow: 6px 6px 0 #fbbf24;  
 }
 
-/* layout: image left, text right */
-.career-layout {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-}
 
-/* image box */
-.career-image {
+.career-image { /* image container */
   flex: 0 0 40%;
   max-width: 340px;
   height: 220px;
@@ -270,44 +250,33 @@ p { /* paragraph text */
   justify-content: center;
   text-align: center;
 }
-
-.career-image img {
+.career-image img { /* image layout */
   width: 95%;      
   height: auto;
   display: block;
-  margin: 0 auto;  /* center the image */
+  margin: 0 auto;  
 }
 
-/* two columns on the right */
-.career-columns {
-  flex: 1;
+
+.career-layout { /* layout: image left, text right */
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
+  align-items: flex-start;
 }
-
-.career-column {
+.career-columns { /* creates two columns with space between them */
+  display: flex;
+  gap: 1.5rem;   /* spacing between the two columns */
+}
+.career-column { /* makes columns equal width */
   flex: 1;
-  font-size: 0.9rem;
+  font-size: 0.9rem;  /* slightly smaller text */
+}
+.career-column ul { /* styling for bullet points inside column */
+  padding-left: 1.1rem;  /* indent bullets */
+  margin-top: 0.25rem;   /* small spacing above list */
 }
 
-.career-column ul {
-  padding-left: 1.1rem;
-  margin-top: 0.25rem;
-}
 
-/* yellow label headings */
-.career-subheading {
-  display: inline-block;
-  background: #ffe53b;
-  padding: 0.35rem 0.75rem;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-  box-shadow: 6px 6px 0 #fbbf24;  /* drop shadow */
-}
-
-.career-subheading.small {
-  margin-top: 1rem;
-}
 
 
 

@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "Istok Web", sans-serif;
-  background: #ff0000; /* dark blue bg */
+  background: #0008ff; /* dark blue bg */
   color: #ffffff; /* global font colour */
 }
 
@@ -651,6 +651,7 @@ header nav a { /* links */
 
   /* redo outlines to fit */
   .text-outline {
+    font-weight: 700;          
     -webkit-text-stroke: 1px #000;  /* thinner outline */
   }
 
@@ -672,12 +673,7 @@ header nav a { /* links */
   .logo-text {
     -webkit-text-stroke: 0.6px #1700e9; 
   }
-
-  /* headings text stroke lighter on mobile */
-  .text-outline {
-    -webkit-text-stroke: 0.8px #000; 
-  }
-
+  
   /* remove stroke on nav links */
   .nav-text {
     -webkit-text-stroke: 0;

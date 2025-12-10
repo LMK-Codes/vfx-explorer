@@ -1,0 +1,830 @@
+body {
+  margin: 0;
+  font-family: "Istok Web", sans-serif;
+  background: #080b64; /* dark blue bg */
+  color: #ffffff; /* global font colour */
+}
+
+/* logo */
+.logo { /* logo text styling (color, outline, size, weight) */
+  color: #05ff8a;
+  -webkit-text-stroke: 1.2px #000000;
+  font-size: 25px;
+}
+.logo-img { /* logo image size */
+  height: 24px;
+}
+.logo-text { /* extra bold text for site name */
+  font-weight: 900;
+}
+
+/* font */
+.text-outline { /* header text */
+  color: #ffea00;                  /* fill */
+  -webkit-text-stroke: 1.6px #000; /* outline */
+  font-weight: 700;    
+}
+.text-body { /* body text */
+  color: #e3eb00;
+  font-size: large;
+}
+.nav-text { /* navigation text */
+  color: #2374ff;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+
+header nav a:hover {
+  text-decoration: underline; /* shows an underline when you hover over navigation links */
+}
+
+
+/* global layouts */
+header, footer{ /*  inner padding for header & footer */
+  padding: 0.75rem 1rem;
+}
+main { /*  centers whole page */
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+header { /* header / nav layout  */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffe53b; 
+  color: #111;
+
+  position: sticky;   /* keeps nav bar stuck at the top */
+  top: 0;             
+  z-index: 1000; 
+}
+footer { /* footer content */
+  text-align: center;
+  font-size: 0.8rem;
+  background: #001934;
+}
+.section-label { /* labels for page headings */
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+  display: inline-block;
+  background: #bbdcfe;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 6px 6px 0 rgba(251, 86, 36, 0.4);
+}
+h1 { /* main page headings  */
+  margin: 0 auto;
+  font-size: 2rem;
+}
+p { /* paragraph text */
+  margin: 0 auto;
+  line-height: 1.5;
+}
+.row { /* row container (centers content horizontally & vertically) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.row p { /* center-align text inside row containers */
+  text-align: center;
+}
+.link-target { /* prevents headings getting cutoff */
+  scroll-margin-top: 120px;
+}
+
+
+
+
+/* ----- HOME PAGE ---- */
+
+/* image carousel  */
+
+.hero-image { /* image container (size, layout, background) */
+  position: relative; 
+  width: 50%;
+  max-width: 24rem;
+  margin: 0 auto;
+  height: 12rem;
+  background: #ffd3a3;
+  border: 4px solid #ffe53b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-image img { /* image layout */
+  width: 85%;      
+  height: auto;
+  display: block;
+}
+
+.hero-image .arrow { /* arrow styling */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffe53b;
+  border: 3px solid #d5b300;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.hero-image .left { /* left arrow adjustment */
+  left: -2.5rem;   
+}
+.hero-image .right { /* right arrow adjustment */
+  right: -2.5rem;  
+}
+.hero-buttons { /* container for slide buttons */
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 10px;
+}
+.hero-buttons button { /* styling for slide buttons */
+  background: #ffe53b;
+  border: 2px solid #ccad00;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.btn-primary { /* container for quiz button */
+  display: block;
+  text-align: center;
+
+  width: 200px;
+  padding: 0.75rem 1.5rem;
+  background: #1124b5;
+
+  color: #ffe53b;
+  -webkit-text-stroke: 0px #000000;
+  font-weight: 750;
+  border-radius: 7px;
+  text-decoration: none;
+
+  margin: 0 0 0.5rem;
+  box-shadow: 4px 4px  rgb(6, 4, 51);
+}
+
+
+/* back to top button (fixed positioning) */
+.back-to-top {
+  position: fixed;     
+  bottom: 1rem;
+  right: 1rem;
+  background: #ffe53b;
+  color: #111;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+/* ---------- CAREERS PAGE ---------- */
+
+.career-subnav { /* subnavigation bar (style, layout, scrollability) */
+  background: #f2ff9c;
+  padding: 0.75rem 1.5rem;
+
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.75rem;
+
+  overflow-x: auto;             /* horizontal scroll */
+  -webkit-overflow-scrolling: touch; /* scroll on mobile */
+
+  scroll-snap-type: x mandatory; /* enables snapping to prevent cutoff while scrolling */
+  scroll-padding-inline: 1.5rem;    /* padding so pills don’t get cut off */
+}
+.career-subnav a { /* styling for pills inside subnav */
+  color: #024a8b;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.9rem;
+  background: #ffd3a3;
+  border-radius: 999px;
+
+  flex: 0 0 auto;               /* prevents pills from shrinking & adjusts to text */
+  scroll-snap-align: start;     /* aligns pills to the left edge of the container */
+}
+
+.career-section { /* container for page */
+  background: #f2ff9c;         
+  padding: 2rem 1.5rem 0.05rem;
+  color: #111;
+}
+.career-title { /* container for titles */
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 0 1.5rem;
+  display: inline-block;
+  background: #ffd3a3;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 6px 6px 0 #fbbf24;  
+}
+.career-subheading { /* subheading style (width, colour, padding, font) */
+  display: inline-block;
+  background: #ffe53b;
+  padding: 0.35rem 0.75rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  box-shadow: 6px 6px 0 #fbbf24;  
+}
+
+
+.career-image { /* image container */
+  flex: 0 0 40%;
+  max-width: 340px;
+  height: 220px;
+  background: #ffd3a3;
+  border: 4px solid #ffe53b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.career-image img { /* image layout */
+  width: 95%;      
+  height: auto;
+  display: block;
+  margin: 0 auto;  
+}
+
+
+.career-layout { /* layout: image left, text right */
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.career-columns { /* creates two columns with space between them */
+  display: flex;
+  gap: 1.5rem;   /* spacing between the two columns */
+}
+.career-column { /* makes columns equal width */
+  flex: 1;
+  font-size: 0.9rem;  /* slightly smaller text */
+}
+.career-column ul { /* styling for bullet points inside column */
+  padding-left: 1.1rem;  /* indent bullets */
+  margin-top: 0.25rem;   /* small spacing above list */
+}
+
+
+
+
+
+
+/* ----------- PIPELINE ----------- */
+
+.pipeline-grid { /* creating the grid */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+
+  /* make 5 rows */
+  grid-template-rows: repeat(5, auto);
+  grid-auto-flow: column;          /* automatic columns (fill down, then across) */
+  grid-auto-columns: 1fr;          /* every new column is equal width */
+
+  gap: 2rem; /* gap between columns */
+}
+.pipeline-box { /* large label box (column title) */
+  min-height: 80px;
+  border-radius: 16px;
+  background: #01346f;
+  box-shadow: 6px 6px 0 #0a0346;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+}
+.pipeline-small { /* smaller info box */
+  min-height: 100px;
+  min-width: 0;       
+  width: 90%;
+
+  border-radius: 16px;
+  background: #01346f;
+  box-shadow: 6px 6px 0 #0a0346;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+
+  padding: 1rem 1rem;   
+  color: white;
+}
+.pipeline-small h3 { /* title styling */
+  font-size: 2rem;        
+  font-weight: 700;
+
+  margin-top: 0;          
+  margin-bottom: 0;   
+
+  line-height: 1.2;
+}
+.pipeline-small p { /* paragraph styling */
+  font-size: 1.5rem;         
+  font-weight: 400;
+
+  margin: 0;             
+
+  line-height: 1.4;
+}
+
+
+
+
+
+/* ------------- SOFTWARE TABLE -------------  */
+
+.software-table-wrapper { /* wrapper around table — enables horizontal scrolling on small screens */
+  max-width: 1100px;
+  margin: 0 auto;
+  border: 4px solid #024a8b;
+  background: #f2ff9c;
+  overflow-x: auto;              /* horizontal scroll on mobile */
+}
+.software-table { /* actual table */
+  width: 100%;
+  border-collapse: collapse;     /* remove spacing between table cells */
+  min-width: 700px;              /* ensures table doesn't shrink too small */
+  color: black;
+}
+.software-table thead { /* header row */
+  background: #ffe53b;
+}
+.software-table th,
+.software-table td { /* styling for table cells + headers */
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e7f57a;     /* grid lines */
+  text-align: left;
+  vertical-align: top;
+  font-size: 0.9rem;
+}
+.software-table a { /* links inside table */
+  color: #024a8b;
+  text-decoration: underline;
+}
+
+
+
+
+
+/* ------QUIZ PAGE ----- */
+
+.quiz-section {
+  background: #7fbbff; 
+  
+  display: flex;
+  justify-content: center; 
+
+  padding: 60px 20px;
+  border-radius: 12px;
+
+  max-width: 600px;   /* width of the card */
+  margin: 0 auto;
+  box-shadow: 8px 8px  rgb(1, 23, 67);
+}
+
+.quiz-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* centers the inner content block */
+.quiz-content {
+  max-width: 700px;     /* width like your reference image */
+  margin: 0 auto;       /* center it horizontally */
+  text-align: left;     /* keep text readable */
+}
+
+/* question title centered ONLY */
+.quiz-question h2 {
+  color: #f2ff00;
+  -webkit-text-stroke: 1px #000000;
+
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* answer options left-aligned inside centered block */
+.quiz-question label {
+  display: block;
+  margin: 8px 0;
+}
+
+.quiz-text{
+  color: #002079;
+  font-size: larger;
+}
+
+.quiz-submit {
+  align-self: center;    
+  margin-top: 24px;
+  padding: 12px 32px;
+  border-radius: 8px;
+  background: #1b7ef0;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid #000;
+}
+
+.quiz-result-header {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffe53b;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-weight: 900;
+  -webkit-text-stroke: 1px #000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+.quiz-result {
+  max-width: 650px;
+  margin: 3.5rem auto 0;
+  background: #7fffd4; 
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  border: 4px solid #000;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+
+.quiz-result-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ff8c00;
+  margin-bottom: 16px;
+}
+
+.quiz-result-body {
+  font-size: 1.1rem;
+  color: #000;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.result-links a {
+  display: block;
+  font-size: 1.2rem;
+  margin: 6px 0;
+  color: #0000ee;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+
+
+
+
+/* ----- RESOURCES PAGE -----  */
+
+.communities-section {
+  background: #9cff9e;   /* light green/yellow */
+}
+
+.tutorials-section {
+  background: #ffb85c;   
+}
+
+.resource-section {
+  padding: 2rem 1.5rem 3rem;
+  color: #000000; /* text */
+}
+
+.resource-subnav {
+  background: #ffff00;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;              /* spacing between TUTORIALS and COMMUNITIES */
+}
+.resource-subnav a {
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #ef9d10;
+  -webkit-text-stroke: 0.9px #000; 
+}
+
+.resource-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 0 1.5rem;
+  display: inline-block;
+  background: #ffd3a3;           /* light orange */
+  padding: 0.5rem 1.5rem;
+  box-shadow: 6px 6px 0 #fbbf24; /* orange shadow bar */
+}
+
+/* intro paragraph row under the heading */
+.resource-section .row {
+  margin: 0 0 1.5rem;
+}
+
+.resource-section .row p {
+  max-width: 50rem;
+  text-align: center;
+}
+
+/* one community "card" row: logo left, text right */
+.resource-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: center;      
+  margin-top: 2rem;
+}
+
+.resource-image {
+  padding: 0.5rem 1.5rem;
+  flex: 0 0 160px;      
+  height: 160px;       
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.resource-image img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+  display: block;
+}
+
+/* layout width & flex behavior */
+.resource-columns {
+  flex: 1;
+}
+
+/* text styling & spacing */
+.resource-column {
+  font-size: 0.95rem;
+}
+
+.resource-subheading {
+  color: #ffdd02;                     
+  -webkit-text-stroke: 1px #000000; 
+  font-size: 2.5rem;
+  display: block;     
+  margin-bottom: 0.5rem;
+}
+
+.resource-column p {
+  margin-top: 0;
+  line-height: 1.6;
+}
+
+/* link styling */
+.resource-column a {
+  color: #024a8b;
+  text-decoration: underline;
+}
+
+
+
+
+
+/* ------------ MOBILE STUFF ---------------- */
+
+/* navigation on mobile */
+header nav { /* hide the nav links */ 
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: #f2ff9c;
+  padding: 1rem;
+}
+header nav.open { /* show nav when hamburger button is toggled via JS */
+  display: flex;
+}
+.nav-toggle { /* hamburger button style */
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #000000;
+  background: none;
+  border: none;
+}
+header nav a { /* links */
+  color: #111;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+
+
+/* edited typography for mobile */
+@media (max-width: 700px) {
+
+  body {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .section-label {
+    font-size: 1.6rem;
+    padding: 0.4rem 1.25rem;
+  }
+  .text-outline,
+  .section-label.text-outline,
+  .quiz-heading.text-outline,
+  .hero-title.text-outline {
+    -webkit-text-stroke: 0;
+    color: #080f38;
+  }
+  .logo {
+    font-size: 20px;
+  }
+  .logo-text {
+    font-size: 1.25rem;         
+    -webkit-text-stroke: 0px; 
+    color: #000;
+  }
+  .nav-text {
+    font-size: 0.95rem;
+    -webkit-text-stroke: 0;
+    color: #2374ff;
+  }
+  .text-body,
+  .row p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    padding: 0 0.5rem;   /* keeps text away from screen edges */
+  }
+  .quiz-question h2 {
+    font-size: 1.25rem;
+    -webkit-text-stroke: 0;   /* no outline on questions */
+    color: #000;
+  }
+  .quiz-text {
+    font-size: 1rem;
+  }
+  .quiz-result-title {
+    font-size: 1.5rem;
+    -webkit-text-stroke: 0; 
+    color: #000;
+  }
+  .quiz-result-header {
+    font-size: 1.3rem;
+    -webkit-text-stroke: 0;
+    color: #000;
+  }
+  .resource-subheading,
+  .resource-title,
+  .resource-subnav
+  {
+    font-size: 1.4rem;
+    -webkit-text-stroke: 0;      /* no outline */
+    color: #000;
+  }
+}
+
+
+
+
+/*  breakpoint - changes the css for tablet/desktop  */
+@media (min-width: 768px) {
+  .nav-toggle {
+    display: none;              /* hide hamburger */
+  }
+
+  header nav {
+    display: flex;              /* always show nav */
+    flex-direction: row;
+    gap: 1.5rem;
+    background: transparent;
+    padding: 0;
+  }
+
+  main {
+    padding-top: 2rem;
+  }
+}
+
+/* pipeline */
+@media (max-width: 768px) {
+  /* make the pipeline stack vertically on phones */
+  .pipeline-grid {
+    display: flex;            /* removes grid */
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .pipeline-box,
+  .pipeline-small {
+    width: 90%;
+  }
+  /* smaller text on mobile */
+  .pipeline-small h3 {
+    font-size: 1.4rem;
+  }
+  .pipeline-small p {
+    font-size: 1rem;
+  }
+}
+
+/* careers */
+@media (max-width: 768px) {
+
+  /* tighter padding on small screen */
+  .career-section {
+    padding: 1.5rem 1rem 2.5rem;
+  }
+
+  /* stack image & text instead of side by side */
+  .career-layout {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  /* image is centered & smaller */
+  .career-image {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 280px;   
+    height: auto;
+    margin: 0 auto;     
+  }
+
+  .career-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* text columns become a single column stack */
+  .career-columns {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .career-column {
+    font-size: 0.95rem;
+  }
+  
+}
+
+/* resources */
+@media (max-width: 768px) {
+
+  /* keeps subnav centred & a bit taller */
+  .resources-subnav,
+  .resource-subnav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background: #ffff00;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .resources-subnav a,
+  .resource-subnav a {
+    font-size: 1.5rem;        /* smaller text on mobile */
+  }
+
+
+  /* blocks are stacked instead of side-by-side */
+  .resource-layout {
+    flex-direction: column;     /* logo on top, text underneath */
+    align-items: center;        /* centre the logo */
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  /* resize images for mobile */
+  .resource-image {
+    flex: 0 0 auto;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 0.25rem;
+  }
+
+  .resource-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}

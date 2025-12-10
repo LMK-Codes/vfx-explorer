@@ -1,8 +1,7 @@
 body {
   margin: 0;
   font-family: "Istok Web", sans-serif;
-  /* background: #0008ff; dark blue bg */
-  background: #03661f; /* dark blue bg */
+  background: #0008ff; /* dark blue bg */
   color: #ffffff; /* global font colour */
 }
 
@@ -636,22 +635,17 @@ header nav a { /* links */
 
 
 
-/* typography for mobile */
+/* edited typography for mobile */
 @media (max-width: 700px) {
 
-  /* base text size */
   body {
     font-size: 15px;
     line-height: 1.5;
   }
-
-  /* page section headings like “Welcome!”, “Careers in VFX”, etc. */
   .section-label {
     font-size: 1.6rem;
     padding: 0.4rem 1.25rem;
   }
-
-  /* TURN OFF heavy outline on small screens */
   .text-outline,
   .section-label.text-outline,
   .quiz-heading.text-outline,
@@ -659,61 +653,46 @@ header nav a { /* links */
     -webkit-text-stroke: 0;
     color: #080f38;
   }
-
-  /* logo in header */
   .logo {
     font-size: 20px;
   }
-
   .logo-text {
     font-size: 1.25rem;         
     -webkit-text-stroke: 0px; 
     color: #000;
   }
-
-  /* nav links – no outline, just solid colour */
   .nav-text {
     font-size: 0.95rem;
     -webkit-text-stroke: 0;
     color: #2374ff;
   }
-
-  /* main intro / body text */
   .text-body,
   .row p {
     font-size: 1.05rem;
     line-height: 1.5;
     padding: 0 0.5rem;   /* keeps text away from screen edges */
   }
-
-  /* quiz questions */
   .quiz-question h2 {
     font-size: 1.25rem;
     -webkit-text-stroke: 0;   /* no outline on questions */
     color: #000;
   }
-
-  /* quiz answers text */
   .quiz-text {
     font-size: 1rem;
   }
-
-  /* quiz result card */
   .quiz-result-title {
     font-size: 1.5rem;
     -webkit-text-stroke: 0; 
     color: #000;
   }
-
   .quiz-result-header {
     font-size: 1.3rem;
     -webkit-text-stroke: 0;
     color: #000;
   }
-
-  /* resources subheadings */
   .resource-subheading,
-  .resource-title
+  .resource-title,
+  .resource-subnav
   {
     font-size: 1.4rem;
     -webkit-text-stroke: 0;      /* no outline */

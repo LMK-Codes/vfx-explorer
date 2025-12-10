@@ -165,6 +165,9 @@ p { /* paragraph text */
   font-weight: 750;
   border-radius: 7px;
   text-decoration: none;
+
+  margin: 0 0 0.5rem;
+  box-shadow: 4px 4px  rgb(6, 4, 51);
 }
 
 
@@ -282,41 +285,41 @@ p { /* paragraph text */
 
 
 /* ----------- PIPELINE ----------- */
-.pipeline-grid {
+
+.pipeline-grid { /* creating the grid */
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
 
-  /* make 4 rows */
+  /* make 5 rows */
   grid-template-rows: repeat(5, auto);
-  grid-auto-flow: column;          /* automatic columns (fill DOWN then across) */
-  grid-auto-columns: 1fr;          /* every new column is full width */
+  grid-auto-flow: column;          /* automatic columns (fill down, then across) */
+  grid-auto-columns: 1fr;          /* every new column is equal width */
 
-  gap: 2rem;
+  gap: 2rem; /* gap between columns */
 }
-
-.pipeline-box {
+.pipeline-box { /* large label box (column title) */
   min-height: 80px;
   border-radius: 16px;
   background: #01346f;
-  box-shadow: 6px 6px 0 #0e0462;
+  box-shadow: 6px 6px 0 #0a0346;
   
   display: flex;
   align-items: center;
   justify-content: center;
+
   font-size: 2rem;
   font-weight: 600;
   color: white;
 }
-
-.pipeline-small {
+.pipeline-small { /* smaller info box */
   min-height: 100px;
-  min-width: 0;       /* allows columns to shrink */
+  min-width: 0;       
   width: 90%;
 
   border-radius: 16px;
   background: #01346f;
-  box-shadow: 6px 6px 0 #0e0462;
+  box-shadow: 6px 6px 0 #0a0346;
 
   display: flex;
   flex-direction: column;
@@ -326,9 +329,7 @@ p { /* paragraph text */
   padding: 1rem 1rem;   
   color: white;
 }
-
-/* TITLE */
-.pipeline-small h3 {
+.pipeline-small h3 { /* title styling */
   font-size: 2rem;        
   font-weight: 700;
 
@@ -337,9 +338,7 @@ p { /* paragraph text */
 
   line-height: 1.2;
 }
-
-
-.pipeline-small p {
+.pipeline-small p { /* paragraph styling */
   font-size: 1.5rem;         
   font-weight: 400;
 
@@ -354,39 +353,31 @@ p { /* paragraph text */
 
 /* ------------- SOFTWARE TABLE -------------  */
 
-/* wrapper so the table can scroll on small screens */
-.software-table-wrapper {
+.software-table-wrapper { /* wrapper around table — enables horizontal scrolling on small screens */
   max-width: 1100px;
   margin: 0 auto;
   border: 4px solid #024a8b;
   background: #f2ff9c;
   overflow-x: auto;              /* horizontal scroll on mobile */
 }
-
-/* actual table */
-.software-table {
+.software-table { /* actual table */
   width: 100%;
-  border-collapse: collapse;
-  min-width: 700px;    
-  color: black; 
+  border-collapse: collapse;     /* remove spacing between table cells */
+  min-width: 700px;              /* ensures table doesn't shrink too small */
+  color: black;
 }
-
-/* header row */
-.software-table thead {
+.software-table thead { /* header row */
   background: #ffe53b;
 }
-
 .software-table th,
-.software-table td {
+.software-table td { /* styling for table cells + headers */
   padding: 0.5rem 0.75rem;
   border: 1px solid #e7f57a;     /* grid lines */
   text-align: left;
   vertical-align: top;
   font-size: 0.9rem;
 }
-
-/* software links */
-.software-table a {
+.software-table a { /* links inside table */
   color: #024a8b;
   text-decoration: underline;
 }
@@ -408,6 +399,7 @@ p { /* paragraph text */
 
   max-width: 600px;   /* width of the card */
   margin: 0 auto;
+  box-shadow: 8px 8px  rgb(1, 23, 67);
 }
 
 .quiz-form {
@@ -439,8 +431,7 @@ p { /* paragraph text */
 }
 
 .quiz-text{
-  color: #000e01;
-
+  color: #002079;
   font-size: larger;
 }
 
@@ -449,7 +440,7 @@ p { /* paragraph text */
   margin-top: 24px;
   padding: 12px 32px;
   border-radius: 8px;
-  background: #ffe53b;
+  background: #1b7ef0;
   font-weight: 700;
   cursor: pointer;
   border: 2px solid #000;
@@ -471,7 +462,7 @@ p { /* paragraph text */
 .quiz-result {
   max-width: 650px;
   margin: 3.5rem auto 0;
-  background: #7fffd4; /* light aqua like your wireframe */
+  background: #7fffd4; 
   padding: 40px 30px;
   border-radius: 12px;
   text-align: center;
@@ -671,8 +662,6 @@ header nav a { /* links */
   }
 }
 
-
-
 /* pipeline */
 @media (max-width: 768px) {
   /* make the pipeline stack vertically on phones */
@@ -695,8 +684,6 @@ header nav a { /* links */
   }
 }
 
-
-
 /* careers */
 @media (max-width: 768px) {
 
@@ -712,13 +699,13 @@ header nav a { /* links */
     gap: 1.25rem;
   }
 
-  /* image is centered, smaller, auto height */
+  /* image is centered & smaller */
   .career-image {
     flex: 0 0 auto;
     width: 100%;
-    max-width: 280px;   /* tweak if you want it bigger/smaller */
+    max-width: 280px;   
     height: auto;
-    margin: 0 auto;     /* center the box */
+    margin: 0 auto;     
   }
 
   .career-image img {
@@ -738,12 +725,10 @@ header nav a { /* links */
   
 }
 
-
-
 /* resources */
 @media (max-width: 768px) {
 
-  /* keep the yellow subnav centred and a bit taller */
+  /* keeps subnav centred & a bit taller */
   .resources-subnav,
   .resource-subnav {
     display: flex;

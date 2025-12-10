@@ -575,12 +575,8 @@ header nav a {
 
 /* softens text outline */
 @media (max-width: 700px) {
-  .logo-text,
-  #hero-title {
-    -webkit-text-stroke: 0.5px;        
-  }
   .nav-text {
-    -webkit-text-stroke: 0.5px;
+      color: #000000;                  
   }
   .text-outline {
     -webkit-text-stroke: 0.5px #1700e9;   
@@ -604,7 +600,7 @@ header nav a {
     background: #3848c3;
 
     color: #ffe53b;
-    -webkit-text-stroke: 0.5px #000000;
+    -webkit-text-stroke: 0.2px #000000;
     font-weight: 750;
     border-radius: 7px;
     text-decoration: none;

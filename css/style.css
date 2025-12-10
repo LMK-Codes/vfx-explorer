@@ -638,6 +638,51 @@ header nav a { /* links */
 /* typography for mobile */
 @media (max-width: 700px) {
 
+  /* global text is smaller */
+  body {
+    font-size: 14px;
+  }
+
+  /* resize page headings */
+  .section-label {
+    font-size: 1.6rem;           /* was 2rem */
+    padding: 0.4rem 1.25rem;
+  }
+
+  /* redo outlines to fit */
+  .text-outline {
+    -webkit-text-stroke: 1px #000;  /* thinner outline */
+  }
+
+  /* resize intro / body text */
+  .text-body,
+  .row p {
+    font-size: 1.05rem;         /* slightly smaller than desktop */
+    line-height: 1.5;
+    padding: 0 0.5rem;          /* small side padding so text isn’t edge-to-edge */
+  }
+
+  /* resize logo text */
+  .logo {
+    font-size: 20px;
+    -webkit-text-stroke: 1px #000;
+  }
+
+  /* resize quiz text - question titles */
+  .quiz-question h2 {
+    font-size: 1.3rem;
+    -webkit-text-stroke: 0.6px #000;   /* softer outline on small screens */
+  }
+
+  /* resize quiz text - answers */
+  .quiz-text {
+    font-size: 1rem;
+  }
+
+  /* resize subheadings on resource page */
+  .resource-subheading {
+    font-size: 1.8rem;          /* was 2.5rem */
+  }
 
 }
 

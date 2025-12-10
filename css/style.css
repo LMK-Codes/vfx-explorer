@@ -5,15 +5,39 @@ body {
   color: #ffffff; /* global font colour */
 }
 
-/* outline for font */
-.text-outline {
-  color: #ffe53b;                     /* inside fill colour */
-  -webkit-text-stroke: 1.5px #000000;   /* outline stroke */    
+/* logo */
+.logo {
+  color: #05ff8a;
+  -webkit-text-stroke: 1.2px #000000;
+  font-size: 25px;
+  font-weight: 900;
+}
+.logo-img {
+  height: 24px;
+}
+.logo-text {
+  font-weight: 900;
 }
 
+/* font outline */
+.text-outline {
+  color: #ffe53b;                  /* fill */
+  -webkit-text-stroke: 1.6px #000; /* outline */
+  font-weight: 700;    
+}
 .text-outline-body {
-  color: #ffe53b;                   
-  -webkit-text-stroke: 0.2px #000000;  
+  color: #ffe53b;
+  -webkit-text-stroke: 0; 
+}
+.nav-text {
+  color: #2374ff;
+  font-size: 15px;
+  font-weight: 700;
+  -webkit-text-stroke: 0;
+}
+
+header nav a:hover {
+  text-decoration: underline; /* shows an underline when you hover over navigation links */
 }
 
 /*  inner padding for header & footer */
@@ -29,7 +53,6 @@ main {
   padding: 1.5rem 1rem 3rem;
 }
 
-
 /* header / nav layout  */
 header {
   display: flex;
@@ -41,31 +64,6 @@ header {
   position: sticky;   /* keeps nav bar stuck at the top */
   top: 0;             
   z-index: 1000; 
-}
-
-.logo {
-  color: #05ff8a;
-  -webkit-text-stroke: 1.2px #000000;                  
-  font-size: 25px;
-}
-
-.logo-img {
-  height: 24px;
-}
-
-.logo-text {
-  font-weight: 800;
-}
-
-header nav a:hover {
-  text-decoration: underline; /* shows an underline when you hover over navigation links */
-}
-
-.nav-text {
-  color: #2374ff;                  
-  -webkit-text-stroke: 0.1px #000000;
-  font-size: 15px;
-  font-weight: 700;
 }
 
 /* labelling page headings */
@@ -174,7 +172,7 @@ p {
   background: #1124b5;
 
   color: #ffe53b;
-  -webkit-text-stroke: 0.7px #000000;
+  -webkit-text-stroke: 0px #000000;
   font-weight: 750;
   border-radius: 7px;
   text-decoration: none;
@@ -455,11 +453,11 @@ footer {
 }
 
 .resource-subnav a {
-  font-size: 2rem;        
+  font-size: 2rem;
   font-weight: 700;
   text-decoration: none;
-  color: #f9ad7d;         
-  -webkit-text-stroke: 1px #024a8b;   
+  color: #f9ad7d;
+  -webkit-text-stroke: 0; 
 }
 
 
@@ -520,7 +518,7 @@ footer {
 
 .resource-subheading {
   color: #ffdd02;                     
-  -webkit-text-stroke: 1.5px #000000; 
+  -webkit-text-stroke: 1px #000000; 
   font-size: 2.5rem;
   display: block;     
   margin-bottom: 0.5rem;
@@ -573,50 +571,43 @@ header nav a {
 
 
 
-/* softens text outline */
+/* typography for mobile */
 @media (max-width: 700px) {
-  .logo-text {
-    font-weight: 100;
-    -webkit-text-stroke: 0.6px #000000;
-  }
-  .nav-text {
-      color: #000000;                  
-  }
-  .text-outline {
-    -webkit-text-stroke: 0px #1700e9;   
-  }
-  .text-outline-body {
-    -webkit-text-stroke: 0px #7d6fff;  
-  }
+
+  /* remove heavy outlines on small screens */
+  .logo,
+  .logo-text,
+  .text-outline,
   .resource-subheading {
-    color: #ffdd02;                     
-    -webkit-text-stroke: 0px #000000; 
-    font-size: 2.5rem;
-    display: block;     
-    margin-bottom: 0.5rem;
+    -webkit-text-stroke: 0;
   }
+
+  /* keep logo readable */
+  .logo-text {
+    font-weight: 800;
+  }
+
+  /* nav links: dark, simple text */
+  .nav-text {
+    color: #000000;
+    -webkit-text-stroke: 0;
+  }
+
+  /* hero/body outlined text – just fill on mobile */
+  .text-outline-body {
+    -webkit-text-stroke: 0;
+  }
+
+  /* buttons: no stroke */
   .btn-primary {
-    display: block;
-    text-align: center;
-
-    width: 200px;
-    padding: 0.75rem 1.5rem;
-    background: #3848c3;
-
-    color: #ffe53b;
-    -webkit-text-stroke: 0px #000000;
-    font-weight: 750;
-    border-radius: 7px;
-    text-decoration: none;
+    -webkit-text-stroke: 0;
   }
+
+  /* resources subnav links: no stroke, slightly smaller */
   .resource-subnav a {
-    font-size: 2rem;        
-    font-weight: 700;
-    text-decoration: none;
-    color: #f9ad7d;         
-    -webkit-text-stroke: 0px #024a8b;   
+    -webkit-text-stroke: 0;
+    font-size: 1.5rem;
   }
-
 }
 
 

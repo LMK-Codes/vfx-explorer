@@ -6,30 +6,30 @@ body {
 }
 
 /* logo */
-.logo {
+.logo { /* logo text styling (color, outline, size, weight) */
   color: #05ff8a;
   -webkit-text-stroke: 1.2px #000000;
   font-size: 25px;
   font-weight: 900;
 }
-.logo-img {
+.logo-img { /* logo image size */
   height: 24px;
 }
-.logo-text {
+.logo-text { /* extra bold text for site name */
   font-weight: 900;
 }
 
-/* font outline */
-.text-outline {
-  color: #ffe53b;                  /* fill */
+/* font */
+.text-outline { /* header text */
+  color: #ffea00;                  /* fill */
   -webkit-text-stroke: 1.6px #000; /* outline */
   font-weight: 700;    
 }
-.text-outline-body {
-  color: #ffe53b;
-  -webkit-text-stroke: 0; 
+.text-body { /* body text */
+  color: #e3eb00;
+  font-size: large;
 }
-.nav-text {
+.nav-text { /* navigation text */
   color: #2374ff;
   font-size: 15px;
   font-weight: 700;
@@ -40,21 +40,38 @@ header nav a:hover {
   text-decoration: underline; /* shows an underline when you hover over navigation links */
 }
 
-/*  inner padding for header & footer */
-header, footer 
+
+h1 { /* main page headings  */
+  margin: 0 auto;
+  font-size: 2rem;
+}
+p { /* paragraph text */
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+
+.row { /* row container (centers content horizontally & vertically) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.row p { /* center-align text inside row containers */
+  text-align: center;
+}
+
+/* layout */
+header, footer /*  inner padding for header & footer */
 {
   padding: 0.75rem 1rem;
 }
-
-/*  centers whole page */
-main {
+main { /*  centers whole page */
   max-width: 70rem;
   margin: 0 auto;
   padding: 1.5rem 1rem 3rem;
 }
-
-/* header / nav layout  */
-header {
+header { /* header / nav layout  */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -65,39 +82,16 @@ header {
   top: 0;             
   z-index: 1000; 
 }
-
-/* labelling page headings */
-.section-label {
+.section-label { /* labels for page headings */
   text-align: center;
   font-size: 2rem;
-  margin: 0 0 1.5rem;
+  margin: 0 0 0.5rem;
   display: inline-block;
   background: #bbdcfe;
   padding: 0.5rem 1.5rem;
   box-shadow: 6px 6px 0 rgba(251, 86, 36, 0.4);
 }
 
-/*  main content  */
-h1 {
-  margin: 0 auto;
-  font-size: 2rem;
-}
-
-p {
-  margin: 0 auto;
-  line-height: 1.5;
-}
-
-.row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
-}
-
-.row p {
-  text-align: center;
-}
 
 
 
@@ -105,6 +99,7 @@ p {
 /* ----- HOME PAGE ---- */
 
 /* image carousel  */
+
 .hero-image { /* container */
   position: relative; 
   width: 50%;
@@ -117,15 +112,13 @@ p {
   align-items: center;
   justify-content: center;
 }
- 
 .hero-image img { /* image */
   width: 85%;      
   height: auto;
   display: block;
 }
 
-/* arrow styles */
-.hero-image .arrow {
+.hero-image .arrow { /* arrow styles */
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -136,13 +129,10 @@ p {
   font-size: 1.5rem;
   cursor: pointer;
 }
-/* left arrow */
-.hero-image .left {
+.hero-image .left { /* left arrow */
   left: -2.5rem;   /* adjust outward from the box */
 }
-
-/* right arrow */
-.hero-image .right {
+.hero-image .right { /* right arrow */
   right: -2.5rem;  /* adjust outward from the box */
 }
 
@@ -152,7 +142,6 @@ p {
   gap: 1rem;
   margin-top: 10px;
 }
-
 .hero-buttons button {
   background: #ffe53b;
   border: 2px solid #ccad00;
@@ -162,8 +151,7 @@ p {
   border-radius: 6px;
 }
 
-/* quiz button */
-.btn-primary {
+.btn-primary { /* quiz button */
   display: block;
   text-align: center;
 
@@ -177,7 +165,6 @@ p {
   border-radius: 7px;
   text-decoration: none;
 }
-
 
 /* footer */
 footer {
@@ -199,6 +186,9 @@ footer {
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
+
+
+
 
 
 /* ---------- CAREERS PAGE ---------- */
@@ -223,13 +213,15 @@ footer {
   padding: 0.75rem 1.5rem;
 
   display: flex;
+  justify-content: flex-start;
   gap: 0.75rem;
 
   overflow-x: auto;             /* enable horizontal scroll */
   overflow-y: hidden;
-  white-space: nowrap;          /* keep pills on one line */
-  -webkit-overflow-scrolling: touch; /* smooth scroll on mobile */
+  -webkit-overflow-scrolling: touch; /* scroll on mobile */
+
   scroll-snap-type: x mandatory;
+  scroll-padding-inline: 1.5rem;    /* padding so pills doesn’t get cut off */
 }
 
 .career-subnav a {
@@ -319,6 +311,8 @@ footer {
 }
 
 
+
+
 /* ----------- PIPELINE ----------- */
 .pipeline-grid {
   max-width: 1200px;
@@ -376,7 +370,7 @@ footer {
   line-height: 1.2;
 }
 
-/* DESCRIPTION */
+
 .pipeline-small p {
   font-size: 1.5rem;         
   font-weight: 400;
@@ -385,6 +379,8 @@ footer {
 
   line-height: 1.4;
 }
+
+
 
 
 
@@ -429,6 +425,8 @@ footer {
 
 
 
+
+
 /* ------QUIZ PAGE ----- */
 
 .quiz-section {
@@ -440,7 +438,7 @@ footer {
   padding: 60px 20px;
   border-radius: 12px;
 
-  max-width: 900px;   /* width of the card */
+  max-width: 600px;   /* width of the card */
   margin: 0 auto;
 }
 
@@ -460,7 +458,7 @@ footer {
 /* question title centered ONLY */
 .quiz-question h2 {
   color: #f2ff00;
-  -webkit-text-stroke: 0.5px #000000;
+  -webkit-text-stroke: 1px #000000;
 
   text-align: center;
   margin-bottom: 16px;
@@ -539,6 +537,8 @@ footer {
 
 
 
+
+
 /* ----- RESOURCES PAGE -----  */
 
 .communities-section {
@@ -562,15 +562,13 @@ footer {
   align-items: center;
   gap: 5rem;              /* spacing between TUTORIALS and COMMUNITIES */
 }
-
 .resource-subnav a {
   font-size: 2rem;
   font-weight: 700;
   text-decoration: none;
-  color: #f9ad7d;
-  -webkit-text-stroke: 0; 
+  color: #ef9d10;
+  -webkit-text-stroke: 0.9px #000; 
 }
-
 
 .resource-title {
   text-align: center;
@@ -647,34 +645,30 @@ footer {
 }
 
 
+
+
+
 /* ------------ MOBILE STUFF ---------------- */
 
 /* navigation on mobile */
-/* hide the nav links */ 
-header nav {
+header nav { /* hide the nav links */ 
   display: none;
   flex-direction: column;
   gap: 0.5rem;
   background: #f2ff9c;
   padding: 1rem;
 }
-
-/* show nav when hamburger button is toggled via JS */
-header nav.open {
+header nav.open { /* show nav when hamburger button is toggled via JS */
   display: flex;
 }
-
-/* hamburger button style */
-.nav-toggle {
+.nav-toggle { /* hamburger button style */
   font-size: 1.8rem;
   cursor: pointer;
   color: #000000;
   background: none;
   border: none;
 }
-
-/* links */
-header nav a {
+header nav a { /* links */
   color: #111;
   text-decoration: none;
   font-size: 1rem;
@@ -855,5 +849,3 @@ header nav a {
     display: block;
   }
 }
-
-

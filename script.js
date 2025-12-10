@@ -54,20 +54,20 @@
 
   const quizResults = {
     1: {
-      title: 'Concept / Storyboard Artist – The Visionary',
+      title: 'The Visionary',
       body: 'You love experimenting with ideas, mood, and storytelling. You fit early-stage roles like Concept Artist or Storyboard Artist.'
     },
     2: {
-      title: '3D Modeler / Texture Artist – The Builder',
-      body: 'You enjoy turning ideas into detailed 3D assets. You fit roles like Modeler or Texture Artist, where precision and structure matter.'
+      title: 'The Builder',
+      body: 'You enjoy turning ideas into detailed 3D assets. You fit roles like 3D Modeler or Texture Artist, where precision and structure matter.'
     },
     3: {
-      title: 'Animator / FX Artist – The Motion Specialist',
+      title: 'The Motion Specialist',
       body: 'You’re drawn to movement, timing, and energy. You fit roles like Animator or FX Artist, bringing scenes to life.'
     },
     4: {
-      title: 'Lighting Artist / Compositor – The Finisher',
-      body: 'You like polishing shots and making them feel cinematic and complete. You fit roles like Lighting Artist or Compositor.'
+      title: 'The Finisher',
+      body: 'You like polishing shots and making them feel cinematic and complete. You fit the role of Compositor.'
     }
   };
 

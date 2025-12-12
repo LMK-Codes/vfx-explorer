@@ -41,18 +41,23 @@
 }
 
 //quiz
-{
-  const quizForm = document.getElementById('quiz-form');
-  const questionBlocks = quizForm.querySelectorAll('.quiz-question');
-  const nextBtn = document.getElementById('quiz-next');
-  const resultSection = document.getElementById('quiz-result');
-  const resultTitle = document.getElementById('quiz-result-title');
-  const resultBody = document.getElementById('quiz-result-body');
+{ 
+  // quiz elements (recieved from the page)
+  const quizForm = document.getElementById('quiz-form');          // wrapper that holds all questions
+  const questionBlocks = quizForm.querySelectorAll('.quiz-question'); // each individual question
+  const nextBtn = document.getElementById('quiz-next');           // next button
 
-  const totalQuestions = questionBlocks.length; // should be 5
-  let currentIndex = 0; // start at first question (index 0)
+  const resultSection = document.getElementById('quiz-result');   // hidden result box
+  const resultTitle = document.getElementById('quiz-result-title'); // result heading text
+  const resultBody = document.getElementById('quiz-result-body');   // result description paragraph
+
+  const totalQuestions = questionBlocks.length;  // how many questions in the quiz (could be updated)
+  let currentIndex = 0;                          // start at first question (index 0)
+
+  // stores how many times each type (1–4) was picked for the result
   const scores = { 1: 0, 2: 0, 3: 0, 4: 0 };
 
+  // text for each personality type
   const quizResults = {
     1: {
       title: 'The Visionary',
@@ -72,11 +77,13 @@
     }
   };
 
+  // shows one question at a time
   function showQuestion(index) {
     questionBlocks.forEach((block, i) => {
       block.style.display = (i === index) ? 'block' : 'none';
     });
 
+    // change button text on last question
     if (index === totalQuestions - 1) {
       nextBtn.textContent = 'See Your Result';
     } else {
@@ -84,8 +91,9 @@
     }
   }
 
+  // calculate final result and show it
   function showResult() {
-    // pick the type with the highest score
+    // find which type has the highest score
     let bestType = 1;
     let bestScore = scores[1];
 
@@ -96,66 +104,74 @@
       }
     }
 
+    // calculates result + displays it
     const result = quizResults[bestType];
     resultTitle.textContent = result.title;
     resultBody.textContent = result.body;
 
+    // connect each type to career and link to careers page
     const linkMap = {
-        1: [
-            { name: "Concept Artist", url: "careers.html#concept-artist" },
-            { name: "Storyboard Artist", url: "careers.html#storyboard-artist" }
-        ],
-        2: [
-            { name: "3D Modeler", url: "careers.html#modeler" },
-            { name: "Texture Artist", url: "careers.html#texture-artist" }
-        ],
-        3: [
-            { name: "Animator", url: "careers.html#animator" },
-            { name: "FX Artist", url: "careers.html#fx-artist" }
-        ],
-        4: [
-            { name: "Compositor", url: "careers.html#compositor" }
-        ]
+      1: [
+        { name: "Concept Artist",    url: "careers.html#concept-artist" },
+        { name: "Storyboard Artist", url: "careers.html#storyboard-artist" }
+      ],
+      2: [
+        { name: "3D Modeler",   url: "careers.html#modeler" },
+        { name: "Texture Artist", url: "careers.html#texture-artist" }
+      ],
+      3: [
+        { name: "Animator",  url: "careers.html#animator" },
+        { name: "FX Artist", url: "careers.html#fx-artist" }
+      ],
+      4: [
+        { name: "Compositor", url: "careers.html#compositor" }
+      ]
     };
 
-const linkContainer = document.getElementById("result-links");
-linkContainer.innerHTML = linkMap[bestType]
-  .map(item => `<a href="${item.url}">${item.name}</a>`)
-  .join("");
+    // builds HTML links for the result section
+    const linkContainer = document.getElementById("result-links");
+    linkContainer.innerHTML = linkMap[bestType]
+      .map(item => `<a href="${item.url}">${item.name}</a>`)
+      .join("");
 
-
+    // show the result box and scroll to it
     resultSection.hidden = false;
     resultSection.scrollIntoView({ behavior: 'smooth' });
 
-    // optional: hide questions + button after completion
+    // hide the quiz questions after finishing
     quizForm.style.display = 'none';
   }
 
+  // button click (updates score, moves on to next) 
   nextBtn.addEventListener('click', () => {
-    const questionNumber = currentIndex + 1; // q1, q2, etc.
+
+    //updates question #
+    const questionNumber = currentIndex + 1; 
+
+    // which option was selected for this question
     const selected = quizForm.querySelector(
       'input[name="q' + questionNumber + '"]:checked'
     );
-
+    // if nothing selected, show alert
     if (!selected) {
       alert('Please choose an answer before continuing.');
       return;
-    }
+      }
 
-    const type = parseInt(selected.value, 10); // 1–4
+    // add 1 point to the chosen type (1–4)
+    const type = parseInt(selected.value, 10);
     scores[type] += 1;
 
+    // either go to next question or show final result
     if (currentIndex < totalQuestions - 1) {
       currentIndex += 1;
       showQuestion(currentIndex);
     } else {
       showResult();
     }
+
   });
 
-  // initialize: show only the first question
+  // shows first question
   showQuestion(currentIndex);
 }
-
-
-

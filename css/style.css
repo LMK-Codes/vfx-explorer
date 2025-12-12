@@ -476,73 +476,69 @@ p { /* paragraph text */
 
 /* ----- RESOURCES PAGE -----  */
 
+/* separate backgrounds for communities & tutorials */
 .communities-section {
-  background: #9cff9e;   /* light green/yellow */
+  background: #9cff9e;
 }
-
 .tutorials-section {
-  background: #ffb85c;   
+  background: #ffb85c;
 }
 
-.resource-section {
-  padding: 2rem 1.5rem 3rem;
-  color: #000000; /* text */
-}
 
-.resource-subnav {
-  background: #ffff00;
+.resource-section { /* wrapper for page content */
+  padding: 2rem 1.5rem 3rem; 
+  color: #000000; 
+}
+.resource-subnav { /* subnavigation style */
+  background: #ffff00; 
   padding: 1rem 0;
-  display: flex;
+  display: flex; 
   justify-content: center;
   align-items: center;
-  gap: 5rem;              /* spacing between TUTORIALS and COMMUNITIES */
+  gap: 5rem; 
 }
-.resource-subnav a {
+.resource-subnav a { /* subnav text */
   font-size: 2rem;
   font-weight: 700;
   text-decoration: none;
   color: #ef9d10;
-  -webkit-text-stroke: 0.9px #000; 
+  -webkit-text-stroke: 0.9px #000;
 }
-
-.resource-title {
+.resource-title { /* style for section titles */
   text-align: center;
   font-size: 2rem;
   margin: 0 0 1.5rem;
   display: inline-block;
-  background: #ffd3a3;           /* light orange */
+  background: #ffd3a3;
   padding: 0.5rem 1.5rem;
-  box-shadow: 6px 6px 0 #fbbf24; /* orange shadow bar */
+  box-shadow: 6px 6px 0 #fbbf24;
 }
 
-/* intro paragraph row under the heading */
-.resource-section .row {
+/* text layout */
+.resource-section .row { 
   margin: 0 0 1.5rem;
 }
-
 .resource-section .row p {
-  max-width: 50rem;
+  max-width: 50rem;                 
   text-align: center;
 }
 
-/* one community "card" row: logo left, text right */
-.resource-layout {
+.resource-layout { /* icon on left + text on right */
   display: flex;
   gap: 2rem;
-  align-items: center;      
+  align-items: center;
   margin-top: 2rem;
 }
 
-.resource-image {
+.resource-image { /* container for icon image */
   padding: 0.5rem 1.5rem;
-  flex: 0 0 160px;      
-  height: 160px;       
-  display: flex;
-  align-items: center; 
-  justify-content: center; 
+  flex: 0 0 160px; /* fixed width area */
+  height: 160px; /* fixed height area */
+  display: flex; /* center the image */
+  align-items: center;
+  justify-content: center;
 }
-
-.resource-image img {
+.resource-image img { /* size for icon images  */
   max-width: 100%;
   max-height: 100%;
   height: auto;
@@ -550,34 +546,30 @@ p { /* paragraph text */
   display: block;
 }
 
-/* layout width & flex behavior */
+/* wrapper for text columns on the right */
 .resource-columns {
   flex: 1;
 }
-
-/* text styling & spacing */
-.resource-column {
+.resource-column { /* style for descriptions */
   font-size: 0.95rem;
 }
 
-.resource-subheading {
-  color: #ffdd02;                     
-  -webkit-text-stroke: 1px #000000; 
+.resource-subheading { /* text style for subheading */
+  color: #ffdd02;
+  -webkit-text-stroke: 1px #000;
   font-size: 2.5rem;
-  display: block;     
+  display: block;
   margin-bottom: 0.5rem;
 }
-
-.resource-column p {
+.resource-column p { /* text style for paragraph */
   margin-top: 0;
   line-height: 1.6;
 }
-
-/* link styling */
-.resource-column a {
+.resource-column a { /* stylized link text */
   color: #024a8b;
   text-decoration: underline;
 }
+
 
 
 
@@ -618,65 +610,77 @@ header nav a { /* links */
     font-size: 15px;
     line-height: 1.5;
   }
+
   .section-label {
     font-size: 1.6rem;
     padding: 0.4rem 1.25rem;
   }
+  
   .text-outline,
   .section-label.text-outline,
   .quiz-heading.text-outline,
-  .hero-title.text-outline {
+  .hero-title.text-outline 
+  {
     -webkit-text-stroke: 0;
     color: #080f38;
   }
+
   .logo {
     font-size: 20px;
   }
+
   .logo-text {
     font-size: 1.25rem;         
     -webkit-text-stroke: 0px; 
     color: #000;
   }
+
   .nav-text {
     font-size: 0.95rem;
     -webkit-text-stroke: 0;
     color: #2374ff;
   }
+
   .text-body,
-  .row p {
+  .row p 
+  {
     font-size: 1.05rem;
     line-height: 1.5;
-    padding: 0 0.5rem;   /* keeps text away from screen edges */
+    padding: 0 0.5rem; 
   }
+
   .quiz-question h2 {
     font-size: 1.25rem;
-    -webkit-text-stroke: 0;   /* no outline on questions */
+    -webkit-text-stroke: 0; 
     color: #000;
   }
+
   .quiz-text {
     font-size: 1rem;
   }
+
   .quiz-result-title {
     font-size: 1.5rem;
     -webkit-text-stroke: 0; 
     color: #000;
   }
+
   .quiz-result-header {
     font-size: 1.3rem;
     -webkit-text-stroke: 0;
     color: #000;
   }
+
   .resource-subheading,
   .resource-title,
-  .resource-subnav
+  .resource-subnav a
   {
     font-size: 1.4rem;
-    -webkit-text-stroke: 0;      /* no outline */
+    -webkit-text-stroke: 0; 
     color: #000;
   }
+  
 }
-
-
 
 
 /*  breakpoint - changes the css for tablet/desktop  */
@@ -743,18 +747,16 @@ header nav a { /* links */
     height: auto;
     margin: 0 auto;     
   }
-
   .career-image img {
     width: 100%;
     height: auto;
   }
 
-  /* text columns become a single column stack */
+  /* columns become a single column stack */
   .career-columns {
     flex-direction: column;
     gap: 1rem;
   }
-
   .career-column {
     font-size: 0.95rem;
   }
@@ -764,7 +766,7 @@ header nav a { /* links */
 /* resources */
 @media (max-width: 768px) {
 
-  /* keeps subnav centred & a bit taller */
+  /* keeps subnav centered & a bit taller */
   .resources-subnav,
   .resource-subnav {
     display: flex;
@@ -785,7 +787,7 @@ header nav a { /* links */
   /* blocks are stacked instead of side-by-side */
   .resource-layout {
     flex-direction: column;     /* logo on top, text underneath */
-    align-items: center;        /* centre the logo */
+    align-items: center;        /* center the logo */
     gap: 0.75rem;
     margin-bottom: 2rem;
   }
@@ -797,7 +799,6 @@ header nav a { /* links */
     height: 140px;
     margin-bottom: 0.25rem;
   }
-
   .resource-image img {
     width: 100%;
     height: auto;

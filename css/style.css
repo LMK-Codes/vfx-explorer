@@ -277,6 +277,9 @@ p { /* paragraph text */
 
 /* ----------- PIPELINE ----------- */
 
+/* using a grid to make the pipeline 
+https://www.w3schools.com/css/css_grid.asp */ 
+
 .pipeline-grid { /* creating the grid */
   max-width: 1200px;
   margin: 0 auto;
@@ -342,6 +345,10 @@ p { /* paragraph text */
 
 /* ------------- SOFTWARE TABLE -------------  */
 
+/* creating a table w html & css
+https://www.w3schools.com/html/html_tables.asp
+https://www.w3schools.com/css/css_table.asp */
+
 .software-table-wrapper { /* wrapper around table — enables horizontal scrolling on small screens */
   max-width: 1100px;
   margin: 0 auto;
@@ -349,7 +356,7 @@ p { /* paragraph text */
   background: #f2ff9c;
   overflow-x: auto;              /* horizontal scroll on mobile */
 }
-.software-table { /* actual table */
+.software-table { /* styling for table */
   width: 100%;
   border-collapse: collapse;     /* remove spacing between table cells */
   min-width: 700px;              /* ensures table doesn't shrink too small */

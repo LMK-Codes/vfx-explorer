@@ -1,42 +1,43 @@
 
 //hero carousel 
 {
+    //array containing images 
     const heroImages = [
     "images/vfx-infinity_war.jpg",
     "images/vfx-fx_particles.png",
     "images/vfx-planet_apes.jpg"
     ];
 
-    let heroIndex = 0;
+    let heroIndex = 0; // index for images
 
+    //calling the image
     function showImage() {
-    document.getElementById("hero-img").src = heroImages[heroIndex];
+      document.getElementById("hero-img").src = heroImages[heroIndex];
     }
 
+    //calling next image (next button)
     function nextImage() {
-    heroIndex = (heroIndex + 1) % heroImages.length;
-    showImage();
+      heroIndex = (heroIndex + 1) % heroImages.length;
+      showImage();
     }
 
+    //calling prev image (next button)
     function prevImage() {
-    heroIndex = (heroIndex - 1 + heroImages.length) % heroImages.length;
-    showImage();
+      heroIndex = (heroIndex - 1 + heroImages.length) % heroImages.length;
+      showImage();
     }
 }
 
-
 //mobile nav
 {
-    const navToggle = document.querySelector('.nav-toggle'); //select button
-    const nav = document.querySelector('header nav'); //select nav menu
+  const navToggle = document.querySelector('.nav-toggle'); //select button
+  const nav = document.querySelector('header nav'); //select nav menu
 
-    navToggle.addEventListener('click', () => // if button is toggled, nav menu is opened
-        {
-            nav.classList.toggle('open'); 
-        }
-    );
-
-
+  navToggle.addEventListener('click', () => // if button is toggled, nav menu is opened
+      {
+          nav.classList.toggle('open'); 
+      }
+  );
 }
 
 //quiz
